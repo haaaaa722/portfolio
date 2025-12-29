@@ -1,25 +1,32 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Header from './components/Header/Header';
+import MobileMenu from './components/mobileMenu/MobileMenu';
+import Home from './pages/Home';
+
+import styles from './App.module.css';
+
+// まだコンポーネントを作っていないので、仮のページを作っておきます
+const About = () => <h2>About Page (作成中)</h2>;
+const Works = () => <h2>Works Page (作成中)</h2>;
+const Photos = () => <h2>Photos Page (作成中)</h2>;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="App">
+        <Header />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/works" element={<Works />} />
+          <Route path="/photos" element={<Photos />} />
+        </Routes>
+        <MobileMenu />
+      </div>
+    </Router>
   );
 }
 
