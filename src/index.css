@@ -11,7 +11,15 @@
   --font-main: "Zen Kurenaido", sans-serif;
 
   /* 色の定義 */
-  --bg-color: light-dark(#f1f1f2, #1e1e20);
+  /* Home */
+  --home-bg: light-dark(#f1f1f2, #1e1e20);
+  /* About */
+  --about-bg: light-dark(#e1e1e2, #2e2e30);
+  /* Works */
+  --works-bg: light-dark(#d1d1d2, #3e3e40);
+  /* Photos */
+  --photos-bg: light-dark(#c1c1c2, #4e4e50);
+  /* text */
   --text-color: light-dark(#1e1e20, #f1f1f2);
 }
 
@@ -19,7 +27,7 @@ body{
   margin :0;
   padding: 0;
   font-family: var(--font-main);
-  background-color: var(--bg-color);
+  background-color: var(--home-bg);
   color: var(--text-color);
   -webkit-font-smmothing :antialiased;
   -moz-osx-font-smoothing :grayscale;

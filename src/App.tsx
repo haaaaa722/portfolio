@@ -1,14 +1,14 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-import Header from './components/Header/Header';
-import MobileMenu from './components/mobileMenu/MobileMenu';
-import Home from './pages/Home';
+import Header from "./components/Header/Header";
+import MobileMenu from "./components/mobileMenu/MobileMenu";
+import Home from "./pages/Home";
+import About from "./pages/About";
 
 import styles from './App.module.css';
 
 // まだコンポーネントを作っていないので、仮のページを作っておきます
-const About = () => <h2>About Page (作成中)</h2>;
 const Works = () => <h2>Works Page (作成中)</h2>;
 const Photos = () => <h2>Photos Page (作成中)</h2>;
 
