@@ -1,0 +1,122 @@
+.container{
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+}
+
+.title{
+    font-size: 2rem;
+    margin-top: 0;
+}
+
+/* View more... */
+.btncontainer{
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.viewmorebtn{
+    width: 50%;
+    height: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    background: var(--bg-color);
+    border: 1px solid light-dark(rgba(30, 30, 32, 0.25), rgba(241, 241, 242, 0.25));
+    border-radius: 1rem;
+    box-shadow: 4px 4px 4px 0px light-dark(rgba(30, 30, 36, 0.25), rgba(241, 241, 242, 0.25));
+
+    font-size: 1.5rem;
+}
+
+.contentwrapper{
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+    background: var(--bg-color);
+    border-radius: 1rem;
+    border: 1px solid light-dark(rgba(30, 30, 32, 0.25), rgba(241, 241, 242, 0.25));
+    box-shadow: 4px 4px 4px 0px light-dark(rgba(30, 30, 36, 0.25), rgba(241, 241, 242, 0.25));
+
+    display:flex;
+    flex-direction: column;
+}
+
+.top, .about, .contact, .works, .photos{
+    padding: 0.5rem;
+}
+
+.top{
+    height: 100vh;
+    max-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topImage{
+    width: 100%;
+    height: 100%;
+    padding: 0.5rem;
+
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.about{
+    height: 60svh;
+    max-height: 60vh;
+}
+
+.contact{
+    height: 40svh;
+    max-height: 40vh;
+}
+
+.works{
+    height: 100svh;
+    max-height: 100vh;
+}
+
+.photos{
+    height: 100svh;
+    max-height: 100vh;
+}
+
+/* tablet */
+@media (min-width: 768px){
+}
+
+/* desktop */
+@media (min-width: 1024px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-areas:
+            "top top"
+            "about works"
+            "contact works"
+            "photos photos";
+    }
+
+    .top{
+        grid-area: top;
+    }
+    .about{
+        grid-area: about;
+    }
+    .contact{
+        grid-area: contact;
+    }
+    .works{
+        grid-area: works;
+    }
+    .photos{
+        grid-area: photos;
+    }
+}

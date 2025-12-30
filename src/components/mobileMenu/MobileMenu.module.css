@@ -122,3 +122,13 @@
 .dummySlot{
     background: light-dark(#c1c1c2, #4e4e50);
 }
+
+@media (min-width: 768px){
+    .menubtn{
+        display: none;
+    }
+
+    .nav{
+        display: none;
+    }
+}
