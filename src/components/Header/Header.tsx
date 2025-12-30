@@ -1,4 +1,4 @@
-import React, { useState, useEffect, use } from "react";
+import React, { useState, useEffect} from "react";
 import { Link, useLocation } from "react-router-dom";
 import { faAddressCard, faHouse, faUser, faLayerGroup, faImages, faMugHot } from "@fortawesome/free-solid-svg-icons";
 import styles from "./Header.module.css";
@@ -10,6 +10,9 @@ const Header = ()=>{
 
     // URL取得
     const location = useLocation();
+
+    // ダークモードの状態管理
+    const [isDarkMode, setIsDarkMode] = useState(false);
 
     // スクロールイベントの監視
     useEffect(()=>{
@@ -24,6 +27,23 @@ const Header = ()=>{
         window.addEventListener("scroll", handleScroll);
         return ()=> window.removeEventListener("scroll", handleScroll);
     },[])
+
+    // 初期読み込み(保存状態復元)
+    useEffect(()=>{
+        const saved = localStorage.getItem("theme");
+        if(saved === "dark"){
+            setIsDarkMode(true);
+            document.documentElement.style.colorScheme = "dark";
+        }else{
+            document.documentElement.style.colorScheme = "light";
+        }
+    },[]);
+
+    // モード切替&保存
+    useEffect(()=>{
+        document.documentElement.style.colorScheme = isDarkMode ? "dark" : "light";
+        localStorage.setItem("theme", isDarkMode ? "dark" : "light");
+    },[isDarkMode]);
 
     return(
         <header className={styles.header}>
@@ -46,8 +66,8 @@ const Header = ()=>{
                 </Link>
             </nav>
 
-            <button className={styles.btn}>
-                <FontAwesomeIcon icon={faMugHot} />
+            <button className={styles.btn} onClick={()=>setIsDarkMode(prev => !prev)}>
+                <FontAwesomeIcon icon={faMugHot}/>
             </button>
         </header>
     );
