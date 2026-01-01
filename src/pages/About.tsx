@@ -3,6 +3,7 @@ import profileImg from "../assets/images/profileIcon.webp";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter, faInstagram, faGithub } from "@fortawesome/free-brands-svg-icons";
 import styles from "./About.module.css";
+import { Link } from "react-router-dom";
 
 const About = ()=>{
     return(
@@ -48,6 +49,7 @@ const About = ()=>{
             <section className={styles.contact}>
                 <h2 className={styles.sectionTitle}>Contact</h2>
                 <p>お問い合わせは各SNSのDM、もしくは下記のフォームからお願いします。</p>
+                <Link to="/contact">お問い合わせはこちら</Link>
             </section>
         </div>
     )

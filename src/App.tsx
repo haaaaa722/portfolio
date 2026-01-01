@@ -5,6 +5,7 @@ import Header from "./components/Header/Header";
 import MobileMenu from "./components/mobileMenu/MobileMenu";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Contact from "./pages/Contact";
 
 import styles from './App.module.css';
 
@@ -21,6 +22,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/works" element={<Works />} />
           <Route path="/photos" element={<Photos />} />
         </Routes>

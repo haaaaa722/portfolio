@@ -1,0 +1,89 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    background: var(--about-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header{
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.title{
+    font-size: 3rem;
+}
+
+.content{
+    width: 100%;
+    padding: 10px;
+}
+
+.formGroup{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1rem;
+}
+
+.formGroup label{
+    font-size: 1.5rem;
+}
+
+.formGroup input{
+    background: var(--home-bg);
+    font: var(--font-main);
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.formGroup textarea{
+    background: var(--home-bg);
+    font: var(--font-main);
+    border: none;
+    font-size: 1rem;
+    padding: 0.5rem;
+}
+
+.submitbtn{
+    display: flex;
+    font: var(--font-main);
+    height: 3rem;
+    padding: 0 25px;
+    font-size: 2rem;
+    align-items: center;
+    background: var(--text-color);
+    color: var(--home-bg);
+    border: none;
+    border-radius: 1.5rem;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.errorMessage{
+    color: #ed5752;
+}
+
+.errorInput{
+    border: 1px solid #ed5752 !important;
+}
+
+.thanksMessage{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.backToAbout{
+    height: 3rem;
+    font-size: 2rem;
+    padding: 0 25px;
+    border-radius: 1.5rem;
+    background: var(--text-color);
+    color: var(--home-bg);
+    cursor: pointer;
+}
