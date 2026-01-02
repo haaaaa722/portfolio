@@ -49,7 +49,7 @@ const About = ()=>{
             <section className={styles.contact}>
                 <h2 className={styles.sectionTitle}>Contact</h2>
                 <p>お問い合わせは各SNSのDM、もしくは下記のフォームからお願いします。</p>
-                <Link to="/contact">お問い合わせはこちら</Link>
+                <Link to="/contact" className={styles.contactbtn}>お問い合わせはこちら</Link>
             </section>
         </div>
     )

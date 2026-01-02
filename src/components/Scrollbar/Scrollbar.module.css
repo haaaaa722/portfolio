@@ -1,0 +1,30 @@
+.track{
+    position: fixed;
+    top: 50%;
+    right: 2.5px;
+    transform: translateY(-50%);
+
+    width: 10px;
+
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+
+    z-index: 9999;
+    pointer-events: none;
+
+    transition: height 0.3s ease;
+}
+
+.thumb{
+    position: absolute;
+
+    width: 8px;
+    height: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: var(--text-color);
+    border-radius: 4px;
+
+    transition: top 0.1s linear;
+}

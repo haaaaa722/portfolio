@@ -4,6 +4,14 @@
   box-sizing: border-box;
 }
 
+::-webkit-scrollbar{
+  display: none;
+}
+
+html{
+  scrollbar-width: none;
+}
+
 :root{
   color-scheme: light dark;
 

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header/Header";
 import MobileMenu from "./components/mobileMenu/MobileMenu";
+import Scrollbar from "./components/Scrollbar/Scrollbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
@@ -17,6 +18,7 @@ function App() {
   return (
     <Router>
       <div className="App">
+        <Scrollbar />
         <Header />
 
         <Routes>

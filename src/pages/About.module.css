@@ -4,6 +4,7 @@
     background: var(--about-bg);
     display: flex;
     flex-direction: column;
+    padding-right: 15px;
 }
 
 .header{
@@ -92,6 +93,23 @@
     margin: 0;
     word-break: keep-all;
     overflow-wrap: break-word;
+}
+
+.contactbtn{
+    height: 2rem;
+    font-size: 1rem;
+    padding: 0 25px;
+    border-radius: 1.5rem;
+    background: var(--text-color);
+    color: var(--home-bg);
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+    margin: 1.5rem auto 0;
 }
 
 @media (min-width: 768px) {
