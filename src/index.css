@@ -29,6 +29,8 @@ html{
   --photos-bg: light-dark(#c1c1c2, #4e4e50);
   /* text */
   --text-color: light-dark(#1e1e20, #f1f1f2);
+  /* 枠線と影 */
+  --border-color: light-dark(rgba(30, 30, 32, 0.25), rgba(241, 241, 242, 0.25));
 }
 
 body{

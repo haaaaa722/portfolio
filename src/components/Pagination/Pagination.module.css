@@ -1,0 +1,22 @@
+.pagination{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.button{
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.button:disabled{
+    opacity: 0.3;
+    cursor: default;
+}
+
+.pageCount{
+    font-size: 1rem;
+}
