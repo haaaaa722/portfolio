@@ -8,6 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    pointer-events: none;
 }
 
 .logo{
@@ -17,6 +18,7 @@
     transition: all 0.3s ease;
     font-size: 2rem;
     margin: 0.5rem;
+    pointer-events: auto;
 }
 
 .hidden{
@@ -33,6 +35,7 @@
     border: none;
     font-size: 2rem;
     margin: 0.5rem;
+    pointer-events: auto;
 }
 
 @media (min-width: 768px){
@@ -42,6 +45,7 @@
         align-items: center;
         background: light-dark(rgba(30, 30, 32, 0.5), rgb(241, 241, 242, 0.5));
         border-radius: 0.5rem;
+        pointer-events: auto;
     }
 
     .navItem{

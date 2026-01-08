@@ -104,6 +104,10 @@
 }
 
 @media (min-width: 768px) {
+    .container{
+        padding-top: 4rem;
+    }
+    
     .profileContent{
         grid-template-columns: auto 1fr;
         justify-items: start;

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useParams, Link } from "react-router-dom";
 import WorksCard from "../components/Works/WorksCard";
 import { worksList, Category } from "../data/worksData";
@@ -9,8 +9,17 @@ const ITEMS_PER_PAGE = 12;
 
 const Works = ()=>{
     const {categorySlug} = useParams();
-    const activeCategory = categorySlug || "All";
+    const activeCategory = (categorySlug as Category) || "All";
     const [currentPage, setCurrentPage] = useState(1);
+    const [highlightStyle, setHighlightStyle] = useState({
+        left: 0,
+        top: 0,
+        width: 0,
+        height: 0,
+    });
+    const tabsRef = useRef<(HTMLAnchorElement | null)[]>([]);
+
+    const categories: Category[] = ["All", "iOS", "Android", "Other"];
 
     // カテゴリ変更で1ページ目に戻す
     useEffect(()=>{
@@ -33,7 +42,20 @@ const Works = ()=>{
         window.scrollTo({top: 0, behavior: "smooth"});
     };
 
-    const categories: Category[] = ["All", "iOS", "Android", "Other"];
+    // カテゴリの背景の処理
+    useEffect(() => {
+        const activeIndex = categories.findIndex(cat => cat === activeCategory);
+        const currentTab = tabsRef.current[activeIndex];
+
+        if (currentTab) {
+            setHighlightStyle({
+                left: currentTab.offsetLeft,
+                top: currentTab.offsetTop,
+                width: currentTab.offsetWidth,
+                height: currentTab.offsetHeight,
+            });
+        }
+    }, [activeCategory]);
 
     return(
         <div className={styles.container}>
@@ -42,11 +64,21 @@ const Works = ()=>{
                 <div className={styles.categoryMenu}>
                     <span className={styles.catLabel}>Category</span>
                     <div className={styles.catList}>
-                        {categories.map((cat)=>(
+                        <div className={styles.highlighter}
+                            style={{
+                                left: `${highlightStyle.left}px`,
+                                top: `${highlightStyle.top}px`,
+                                width: `${highlightStyle.width}px`,
+                                height: `${highlightStyle.height}px`,
+                            }}
+                        />
+
+                        {categories.map((cat, index)=>(
                             <Link
                                 key={cat}
+                                ref={(el)=>{tabsRef.current[index] = el;}}
                                 to={cat === "All" ? "/works" : `/works/${cat}`}
-                                className={`${styles.catBtn} ${activeCategory === cat ? styles.active : ""}`}
+                                className={`${styles.catBtn}`}
                             >
                                 {cat}
                             </Link>
