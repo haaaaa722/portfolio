@@ -9,11 +9,9 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Works from "./pages/Works";
 import WorksDetailLoader from "./pages/WorksPages/WorksDetailLoader";
+import Photos from "./pages/Photos";
 
 import styles from './App.module.css';
-
-// まだコンポーネントを作っていないので、仮のページを作っておきます
-const Photos = () => <h2>Photos Page (作成中)</h2>;
 
 function App() {
   return (
