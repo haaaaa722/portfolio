@@ -1,14 +1,329 @@
-import React from "react";
+import React, { useEffect, useMemo, useState } from "react";
+import { Link, useParams } from "react-router-dom";
+import { photoCategories, photos, PhotoItem } from "../data/photosData";
+import Pagination from "../components/Pagination/Pagination";
 import styles from "./Photos.module.css";
 
 const Photos = ()=>{
+    const {categorySlug, subSlug} = useParams();
+
+    const [isPanelOpen, setIsPanelOpen] = useState(false); // mobileカテゴリ開閉
+    const [openCategory, setOpenCategory] = useState<string | null>(null); // "+"で展開中のカテゴリ
+    const [modalItem, setModalItem] = useState<PhotoItem | null>(null); // モーダル表示
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const getItemsPerPage = ()=>{
+        const w = window.innerWidth;
+        if(w >= 1024) return 28;
+        if(w >= 768) return 24;
+        return 21;
+    };
+
+    const [itemsPerPage, setItemsPerPage] = useState(getItemsPerPage());
+
+    const active = useMemo(()=>{
+        // /photos -> all
+        if(!categorySlug) return {type: "all" as const};
+
+        // /photos/:category
+        if(categorySlug && !subSlug) return {type:"category" as const, categorySlug};
+
+        // /photos/:category/:sub
+        return {type: "subcategory" as const, categorySlug, subSlug};
+    }, [categorySlug, subSlug]);
+
+    const filteredPhotos = useMemo(()=>{
+        if(active.type === "all") return photos;
+        if(active.type === "category") return photos.filter(p => p.categorySlug === active.categorySlug);
+        return photos.filter(p => p.categorySlug === active.categorySlug && p.subSlug === active.subSlug);
+    }, [active]);
+
+    const isActiveAll = active.type === "all";
+    const isActiveCategory = (catSlug: string)=>{
+        return(
+            (active.type === "category" && active.categorySlug === catSlug) ||
+            (active.type === "subcategory" && active.categorySlug === catSlug)
+        );
+    };
+    const isActiveSub = (catSlug: string, sSlug: string)=>{
+        return active.type === "subcategory" && active.categorySlug === catSlug && active.subSlug === sSlug;
+    };
+
+    const toggleOpenCategory = (catSlug: string)=>{
+        setOpenCategory(prev => (prev === catSlug ? null : catSlug));
+    };
+
+    const totalPages = useMemo(()=>{
+        return Math.max(1, Math.ceil(filteredPhotos.length / itemsPerPage));
+    }, [filteredPhotos.length]);
+
+    const handlePageChange = (page: number)=>{
+        setCurrentPage(page);
+        window.scrollTo({top: 0, behavior: "smooth"});
+    };
+
+    useEffect(()=>{
+        setCurrentPage(1);
+    }, [categorySlug, subSlug]);
+
+    useEffect(()=>{
+        const onResize = ()=>{
+            setItemsPerPage(getItemsPerPage());
+        };
+        window.addEventListener("resize", onResize);
+        return ()=> window.removeEventListener("resize", onResize);
+    }, []);
+
+    const pagedPhotos = useMemo(()=>{
+        const start = (currentPage -1) * itemsPerPage;
+        return filteredPhotos.slice(start, start + itemsPerPage);
+    }, [filteredPhotos, currentPage]);
+
+    useEffect(()=>{
+        setCurrentPage(1);
+    }, [itemsPerPage]);
+
+    const activeCategory = useMemo(()=>{
+        return openCategory
+            ? photoCategories.find((c)=> c.slug === openCategory) ?? null
+            : null;
+    }, [openCategory]);
+
+    useEffect(()=>{
+        if(!isPanelOpen){
+            setOpenCategory(null);
+        }
+    }, [isPanelOpen]);
+
     return(
         <div className={styles.container}>
             <div className={styles.header}>
                 <h1 className={styles.title}>Photos</h1>
+
+                {/* tablet/pc */}
+                <div className={styles.categoryArea}>
+                    {!activeCategory ? (
+                        <>
+                            <div className={styles.leftLabel}>Category</div>
+
+                            <ul className={styles.rightList}>
+                                <li>
+                                    <Link
+                                        to="/photos"
+                                        className={`${styles.linkBtn} ${isActiveAll ? styles.isActive : ""}`}
+                                    >
+                                        All
+                                    </Link>
+                                </li>
+
+                                {photoCategories.map((cat)=>(
+                                    <li key={cat.slug}>
+                                        <Link
+                                            to={`/photos/${cat.slug}`}
+                                            className={`${styles.linkBtn} ${isActiveCategory(cat.slug) ? styles.isActive : ""}`}
+                                            onClick={()=>setOpenCategory(null)}
+                                        >
+                                            {cat.name}
+                                        </Link>
+
+                                        <button
+                                            type="button"
+                                            className={styles.expandBtn}
+                                            onClick={(e)=>{
+                                                e.preventDefault();
+                                                e.stopPropagation();
+                                                setOpenCategory(cat.slug);
+                                            }}
+                                            aria-label={`${cat.name} subcategories`}
+                                        >
+                                            +
+                                        </button>
+                                    </li>
+                                ))}
+                            </ul>
+                        </>
+                    ) : (
+                        <>
+                            <button
+                                type="button"
+                                className={styles.leftActiveCat}
+                                onClick={()=>setOpenCategory(null)}
+                            >
+                                <span>{activeCategory.name}</span>
+                                <span className={styles.expandIcon}>-</span>
+                            </button>
+
+                            <ul className={styles.rightList}>
+                                {activeCategory.subcategories.map((sub)=>(
+                                    <li key={sub.slug}>
+                                        <Link
+                                            to={`/photos/${activeCategory.slug}/${sub.slug}`}
+                                            className={`${styles.linkBtn} ${isActiveSub(activeCategory.slug, sub.slug) ? styles.isActive : ""}`}
+                                        >
+                                            {sub.name}
+                                        </Link>
+                                    </li>
+                                ))}
+                            </ul>
+                        </>
+                    )}
+                </div>
+
+                {/* mobile:category */}
+                {!isPanelOpen && (
+                    <button
+                        type="button"
+                        className={styles.mobileCategoryTrigger}
+                        onClick={()=>setIsPanelOpen(true)}
+                        aria-expanded={isPanelOpen}
+                    >
+                        Category <span className={styles.chev}>▼</span>
+                    </button>
+                )}
             </div>
+
+            {/* mobile:panel */}
+            {isPanelOpen && (
+                <div className={styles.mobilePanel}>
+                    <div className={styles.mobilePanelTop}>
+                        <button
+                            type="button"
+                            className={styles.mobileClose}
+                            onClick={()=>{
+                                setIsPanelOpen(false)
+                                setOpenCategory(null);
+                            }}
+                        >
+                            Close <span>▲</span>
+                        </button>
+                    </div>
+
+                    <div className={styles.mobileCatList}>
+                        {!openCategory ? (
+                            <>
+                                <Link
+                                    to="/photos"
+                                    className={`${styles.linkBtnMobile} ${isActiveAll ? styles.isActive : ""}`}
+                                    onClick={()=>{
+                                        setOpenCategory(null);
+                                        setIsPanelOpen(false);
+                                    }}
+                                >
+                                    All
+                                </Link>
+
+                                {photoCategories.map((cat)=>(
+                                    <div key={cat.slug} className={styles.mobileCatRow}>
+                                        <Link
+                                            to={`/photos/${cat.slug}`}
+                                            className={`${styles.linkBtnMobile} ${isActiveCategory(cat.slug) ? styles.isActive : ""}`}
+                                            onClick={()=>setIsPanelOpen(false)}
+                                        >
+                                            {cat.name}
+                                        </Link>
+
+                                        <button
+                                            type="button"
+                                            className={styles.expandBtnMobile}
+                                            onClick={()=>setOpenCategory(cat.slug)}
+                                            aira-label={`${cat.name} subcategories`}
+                                        >
+                                            +
+                                        </button>
+                                    </div>
+                                ))}
+                            </>
+                        ) : (
+                            (()=>{
+                                const cat = photoCategories.find((c)=>c.slug === openCategory);
+                                if(!cat) return null;
+
+                                return(
+                                    <div className={styles.mobileSubLayout}>
+                                        <button
+                                            type="button"
+                                            className={styles.mobileOpenCat}
+                                            onClick={()=>setOpenCategory(null)}
+                                        >
+                                            <span>{cat.name}</span>
+                                            <span className={styles.expandIcon}>-</span>
+                                        </button>
+
+                                        <ul className={styles.mobileSubList}>
+                                            {cat.subcategories.map((sub)=>(
+                                                <li key={sub.slug}>
+                                                    <Link
+                                                        to={`/photos/${cat.slug}/${sub.slug}`}
+                                                        className={`${styles.linkBtnMobile} ${isActiveSub(cat.slug, sub.slug) ? styles.isActive : ""}`}
+                                                        onClick={()=>setIsPanelOpen(false)}
+                                                    >
+                                                        {sub.name}
+                                                    </Link>
+                                                </li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                )
+                            })()
+                        )}
+                    </div>
+                </div>
+            )}
+
+            {/* grid */}
+            <div className={styles.grid}>
+                {filteredPhotos.length === 0 ? (
+                    <div className={styles.noData}>該当する作品はありません</div>
+                ) : (
+                    pagedPhotos.map((p)=>(
+                        <button
+                            key={p.id}
+                            type="button"
+                            className={styles.card}
+                            onClick={()=>setModalItem(p)}
+                        >
+                            <img className={styles.thumb} src={p.thumbSrc} alt="" />
+                        </button>
+                    ))
+                )}
+            </div>
+
+            {totalPages > 1 && (
+                <Pagination
+                    currentPage={currentPage}
+                    totalPages={totalPages}
+                    onPageChange={handlePageChange}
+                />
+            )}
+
+            {/* modal */}
+            {modalItem && (
+                <div
+                    className={styles.modalOverlay}
+                    onClick={()=>setModalItem(null)}
+                    role="dialog"
+                    aria-modal="true"
+                >
+                    <div
+                        className={styles.modal}
+                        onClick={(e)=>e.stopPropagation()}
+                    >
+                        <img className={styles.modalImg} src={modalItem.fullSrc} alt="" />
+                        <div className={styles.modalMeta}>
+                            <div className={styles.modalText}>{modalItem.description ?? "data"}</div>
+                            <button
+                                type="button"
+                                className={styles.modalClose}
+                                onClick={()=>setModalItem(null)}
+                            >
+                                Close <span>×</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
-    )
+    );
 }
 
 export default Photos;

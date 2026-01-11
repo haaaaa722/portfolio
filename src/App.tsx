@@ -28,6 +28,8 @@ function App() {
           <Route path="/works/:categorySlug" element={<Works />} />
           <Route path="/works/:category/:workId" element={<WorksDetailLoader />} />
           <Route path="/photos" element={<Photos />} />
+          <Route path="/photos/:categorySlug" element={<Photos />} />
+          <Route path="/photos/:categorySlug/:subSlug" element={<Photos />} />
         </Routes>
         <MobileMenu />
       </div>
