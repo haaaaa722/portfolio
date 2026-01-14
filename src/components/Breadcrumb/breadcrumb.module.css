@@ -1,0 +1,15 @@
+.list{
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list a{
+    font-size: 1.5rem;
+    color: #375e97;
+}
+
+.separator{
+    font-size: 1.5rem;
+}
