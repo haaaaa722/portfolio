@@ -16,58 +16,41 @@ export type PhotoItem = {
 
 export const photoCategories: PhotoCategory[] = [
     {
-        name: "category a",
-        slug: "a",
+        name: "animals", // 動物
+        slug: "animals",
         subcategories: [
-            {name: "subcategory a", slug: "a"},
-            {name: "subcategory b", slug: "b"},
-            {name: "subcategory c", slug: "c"},
-            {name: "subcategory d", slug: "d"},
-            {name: "subcategory e", slug: "e"},
+            {name: "birds", slug: "birds"}, // 鳥
+            {name: "cats", slug: "cats"}, // 猫
+            {name: "dogs", slug: "dogs"}, //犬
+            {name: "marine life", slug: "marine life"}, // 海の生き物
         ],
     },
     {
-        name: "category b",
-        slug: "b",
+        name: "architecture", // 建築物
+        slug: "architecture",
         subcategories: [
-            {name: "subcategory a", slug: "a"},
-            {name: "subcategory b", slug: "b"},
-            {name: "subcategory c", slug: "c"},
-            {name: "subcategory d", slug: "d"},
-            {name: "subcategory e", slug: "e"},
+            {name: "cityscape", slug: "cityscape"}, // 街とか
+            {name: "details", slug: "details"}, // 壁・階段・素材・パーツみたいな
+            {name: "exterior", slug: "exterior"}, // 外観
+            {name: "interior", slug: "interior"}, // 室内とか空間
         ],
     },
     {
-        name: "category c",
-        slug: "c",
+        name: "landscapes",
+        slug: "landscapes",
         subcategories: [
-            {name: "subcategory a", slug: "a"},
-            {name: "subcategory b", slug: "b"},
-            {name: "subcategory c", slug: "c"},
-            {name: "subcategory d", slug: "d"},
-            {name: "subcategory e", slug: "e"},
+            {name: "mountains", slug: "mountains"}, // 山
+            {name: "seascapes", slug: "seascapes"}, // 海
+            {name: "sky", slug: "sky"}, // 空
         ],
     },
     {
-        name: "category d",
-        slug: "d",
+        name: "plants",
+        slug: "plants",
         subcategories: [
-            {name: "subcategory a", slug: "a"},
-            {name: "subcategory b", slug: "b"},
-            {name: "subcategory c", slug: "c"},
-            {name: "subcategory d", slug: "d"},
-            {name: "subcategory e", slug: "e"},
-        ],
-    },
-    {
-        name: "category e",
-        slug: "e",
-        subcategories: [
-            {name: "subcategory a", slug: "a"},
-            {name: "subcategory b", slug: "b"},
-            {name: "subcategory c", slug: "c"},
-            {name: "subcategory d", slug: "d"},
-            {name: "subcategory e", slug: "e"},
+            {name: "flowers", slug: "flowers"},
+            {name: "leaves", slug: "leaves"},
+            {name: "trees", slug: "trees"},
         ],
     },
 ];

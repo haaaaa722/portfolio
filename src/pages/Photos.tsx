@@ -55,7 +55,7 @@ const Photos = ()=>{
 
     const totalPages = useMemo(()=>{
         return Math.max(1, Math.ceil(filteredPhotos.length / itemsPerPage));
-    }, [filteredPhotos.length]);
+    }, [filteredPhotos.length, itemsPerPage]);
 
     const handlePageChange = (page: number)=>{
         setCurrentPage(page);
@@ -77,17 +77,30 @@ const Photos = ()=>{
     const pagedPhotos = useMemo(()=>{
         const start = (currentPage -1) * itemsPerPage;
         return filteredPhotos.slice(start, start + itemsPerPage);
-    }, [filteredPhotos, currentPage]);
+    }, [filteredPhotos, currentPage, itemsPerPage]);
 
     useEffect(()=>{
         setCurrentPage(1);
     }, [itemsPerPage]);
 
+    const sortedCategories = useMemo(()=>{
+        return [...photoCategories].sort((a,b)=>
+            a.name.localeCompare(b.name)
+        );
+    },[]);
+
     const activeCategory = useMemo(()=>{
         return openCategory
-            ? photoCategories.find((c)=> c.slug === openCategory) ?? null
+            ? sortedCategories.find((c)=> c.slug === openCategory) ?? null
             : null;
-    }, [openCategory]);
+    }, [openCategory, sortedCategories]);
+
+    const sortedSubcategories = useMemo(()=>{
+        if(!activeCategory) return [];
+        return [...activeCategory.subcategories].sort((a, b)=>
+            a.name.localeCompare(b.name)
+        );
+    },[activeCategory]);
 
     useEffect(()=>{
         if(!isPanelOpen){
@@ -116,7 +129,7 @@ const Photos = ()=>{
                                     </Link>
                                 </li>
 
-                                {photoCategories.map((cat)=>(
+                                {sortedCategories.map((cat)=>(
                                     <li key={cat.slug}>
                                         <Link
                                             to={`/photos/${cat.slug}`}
@@ -154,7 +167,7 @@ const Photos = ()=>{
                             </button>
 
                             <ul className={styles.rightList}>
-                                {activeCategory.subcategories.map((sub)=>(
+                                {sortedSubcategories.map((sub)=>(
                                     <li key={sub.slug}>
                                         <Link
                                             to={`/photos/${activeCategory.slug}/${sub.slug}`}
@@ -212,7 +225,7 @@ const Photos = ()=>{
                                     All
                                 </Link>
 
-                                {photoCategories.map((cat)=>(
+                                {sortedCategories.map((cat)=>(
                                     <div key={cat.slug} className={styles.mobileCatRow}>
                                         <Link
                                             to={`/photos/${cat.slug}`}
@@ -226,7 +239,7 @@ const Photos = ()=>{
                                             type="button"
                                             className={styles.expandBtnMobile}
                                             onClick={()=>setOpenCategory(cat.slug)}
-                                            aira-label={`${cat.name} subcategories`}
+                                            aria-label={`${cat.name} subcategories`}
                                         >
                                             +
                                         </button>
