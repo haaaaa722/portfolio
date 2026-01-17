@@ -117,18 +117,11 @@ const Photos = ()=>{
                 <div className={styles.categoryArea}>
                     {!activeCategory ? (
                         <>
-                            <div className={styles.leftLabel}>Category</div>
+                            <Link to="/photos" className={styles.leftLabel}>
+                                Category
+                            </Link>
 
                             <ul className={styles.rightList}>
-                                <li>
-                                    <Link
-                                        to="/photos"
-                                        className={`${styles.linkBtn} ${isActiveAll ? styles.isActive : ""}`}
-                                    >
-                                        All
-                                    </Link>
-                                </li>
-
                                 {sortedCategories.map((cat)=>(
                                     <li key={cat.slug}>
                                         <Link
@@ -222,7 +215,7 @@ const Photos = ()=>{
                                         setIsPanelOpen(false);
                                     }}
                                 >
-                                    All
+                                    Category
                                 </Link>
 
                                 {sortedCategories.map((cat)=>(
@@ -323,13 +316,18 @@ const Photos = ()=>{
                     >
                         <img className={styles.modalImg} src={modalItem.fullSrc} alt="" />
                         <div className={styles.modalMeta}>
-                            <div className={styles.modalText}>{modalItem.description ?? "data"}</div>
+                            <p className={styles.modalText}>
+                                text
+                            </p>
+                            <p className={styles.modalCategory}>
+                                {modalItem.description ?? `#${modalItem.categorySlug} #${modalItem.subSlug}`}
+                            </p>
                             <button
                                 type="button"
                                 className={styles.modalClose}
                                 onClick={()=>setModalItem(null)}
                             >
-                                Close <span>×</span>
+                                <span className={styles.closeBtn}/>
                             </button>
                         </div>
                     </div>
