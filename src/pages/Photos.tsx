@@ -32,10 +32,26 @@ const Photos = ()=>{
         return {type: "subcategory" as const, categorySlug, subSlug};
     }, [categorySlug, subSlug]);
 
+    const sortByIdDesc = (items: PhotoItem[])=>{
+        return [...items].sort(
+            (a, b)=>Number(b.id) - Number(a.id)
+        );
+    };
+
     const filteredPhotos = useMemo(()=>{
-        if(active.type === "all") return photos;
-        if(active.type === "category") return photos.filter(p => p.categorySlug === active.categorySlug);
-        return photos.filter(p => p.categorySlug === active.categorySlug && p.subSlug === active.subSlug);
+        let result: PhotoItem[];
+
+        if(active.type === "all"){
+            result = photos;
+        }else if(active.type === "category"){
+            result = photos.filter(p => p.categorySlug === active.categorySlug);
+        }else{
+            result = photos.filter(
+                p => p.categorySlug === active.categorySlug && p.subSlug === active.subSlug
+            );
+        }
+
+        return sortByIdDesc(result);
     }, [active]);
 
     const isActiveAll = active.type === "all";
@@ -123,7 +139,7 @@ const Photos = ()=>{
 
                             <ul className={styles.rightList}>
                                 {sortedCategories.map((cat)=>(
-                                    <li key={cat.slug}>
+                                    <li key={cat.slug} className={styles.categoryItem}>
                                         <Link
                                             to={`/photos/${cat.slug}`}
                                             className={`${styles.linkBtn} ${isActiveCategory(cat.slug) ? styles.isActive : ""}`}
@@ -142,7 +158,9 @@ const Photos = ()=>{
                                             }}
                                             aria-label={`${cat.name} subcategories`}
                                         >
-                                            +
+                                            <span className={styles.catOpenBtn}/>
+                                            <span className={styles.catOpenBtn}/>
+                                            <span className={styles.catOpenBtn}/>
                                         </button>
                                     </li>
                                 ))}
@@ -150,14 +168,25 @@ const Photos = ()=>{
                         </>
                     ) : (
                         <>
-                            <button
-                                type="button"
-                                className={styles.leftActiveCat}
-                                onClick={()=>setOpenCategory(null)}
-                            >
-                                <span>{activeCategory.name}</span>
-                                <span className={styles.expandIcon}>-</span>
-                            </button>
+                            <div className={styles.leftActiveCat}>
+                                <Link
+                                    to={`/photos/${activeCategory.slug}`}
+                                    className={styles.leftActiveCatLink}
+                                >
+                                    {activeCategory.name}
+                                </Link>
+
+                                <button
+                                    type="button"
+                                    className={styles.expandBtn}
+                                    onClick={()=>setOpenCategory(null)}
+                                    aria-label="close category"
+                                >
+                                    <span className={styles.catCloseBtn}/>
+                                    <span className={styles.catCloseBtn}/>
+                                    <span className={styles.catCloseBtn}/>
+                                </button>
+                            </div>
 
                             <ul className={styles.rightList}>
                                 {sortedSubcategories.map((sub)=>(
@@ -234,7 +263,9 @@ const Photos = ()=>{
                                             onClick={()=>setOpenCategory(cat.slug)}
                                             aria-label={`${cat.name} subcategories`}
                                         >
-                                            +
+                                            <span className={styles.catOpenBtn}/>
+                                            <span className={styles.catOpenBtn}/>
+                                            <span className={styles.catOpenBtn}/>
                                         </button>
                                     </div>
                                 ))}
@@ -246,14 +277,25 @@ const Photos = ()=>{
 
                                 return(
                                     <div className={styles.mobileSubLayout}>
-                                        <button
-                                            type="button"
-                                            className={styles.mobileOpenCat}
-                                            onClick={()=>setOpenCategory(null)}
-                                        >
-                                            <span>{cat.name}</span>
-                                            <span className={styles.expandIcon}>-</span>
-                                        </button>
+                                        <div className={styles.mobileOpenCat}>
+                                            <Link to={`/photos/${cat.slug}`}
+                                                className={styles.mobileOpenCatLink}
+                                                onClick={()=>setIsPanelOpen(false)}
+                                            >
+                                                {cat.name}
+                                            </Link>
+
+                                            <button
+                                                type="button"
+                                                className={styles.expandBtnMobile}
+                                                onClick={()=>setOpenCategory(null)}
+                                                aria-label="close category"
+                                            >
+                                                <span className={styles.catCloseBtn}/>
+                                                <span className={styles.catCloseBtn}/>
+                                                <span className={styles.catCloseBtn}/>
+                                            </button>
+                                        </div>
 
                                         <ul className={styles.mobileSubList}>
                                             {cat.subcategories.map((sub)=>(
@@ -317,10 +359,12 @@ const Photos = ()=>{
                         <img className={styles.modalImg} src={modalItem.fullSrc} alt="" />
                         <div className={styles.modalMeta}>
                             <p className={styles.modalText}>
-                                text
+                                Date: {modalItem.date}<br/>
+                                Camera: {modalItem.camera}<br/>
+                                Lens: {modalItem.lens}
                             </p>
                             <p className={styles.modalCategory}>
-                                {modalItem.description ?? `#${modalItem.categorySlug} #${modalItem.subSlug}`}
+                                {`#${modalItem.categorySlug} #${modalItem.subSlug}`}
                             </p>
                             <button
                                 type="button"

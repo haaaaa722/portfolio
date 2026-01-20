@@ -58,10 +58,10 @@ const Header = ()=>{
                 <Link to="/about" className={`${styles.navItem} ${styles.toabout} ${location.pathname === "/about" ? styles.active : ""}`}>
                     <FontAwesomeIcon icon={faUser} />About
                 </Link>
-                <Link to="/works" className={`${styles.navItem} ${styles.toworks} ${location.pathname === "/works" ? styles.active : ""}`}>
+                <Link to="/works" className={`${styles.navItem} ${styles.toworks} ${location.pathname.startsWith("/works") ? styles.active : ""}`}>
                     <FontAwesomeIcon icon={faLayerGroup} />Works
                 </Link>
-                <Link to="/photos" className={`${styles.navItem} ${styles.tophotos} ${location.pathname === "/photos" ? styles.active : ""}`}>
+                <Link to="/photos" className={`${styles.navItem} ${styles.tophotos} ${location.pathname.startsWith("/photos") ? styles.active : ""}`}>
                     <FontAwesomeIcon icon={faImages} />Photos
                 </Link>
             </nav>

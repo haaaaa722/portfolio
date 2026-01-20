@@ -88,3 +88,9 @@
     color: var(--home-bg);
     cursor: pointer;
 }
+
+@media (min-width: 768px){
+    .container{
+        padding-top: 4rem;
+    }
+}

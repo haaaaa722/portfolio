@@ -11,7 +11,9 @@ export type PhotoItem = {
     subSlug?: string;
     thumbSrc: string;
     fullSrc: string;
-    description?: string;
+    date?: string;
+    camera?: string;
+    lens?: string;
 };
 
 export const photoCategories: PhotoCategory[] = [
@@ -85,7 +87,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "cityscape",
     "thumbSrc": "/images/photos/thumb/img_0001.webp",
-    "fullSrc": "/images/photos/full/img_0001.webp"
+    "fullSrc": "/images/photos/full/img_0001.webp",
+    "date": "2022.04.03",
+    "camera": "iPhone 11",
+    "lens": "広角カメラ 26mm f1.8"
   },
   {
     "id": "0002",
@@ -93,7 +98,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "exterior",
     "thumbSrc": "/images/photos/thumb/img_0002.webp",
-    "fullSrc": "/images/photos/full/img_0002.webp"
+    "fullSrc": "/images/photos/full/img_0002.webp",
+    "date": "2022.09.02",
+    "camera": "iPhone 11",
+    "lens": "広角カメラ 26mm f1.8"
   },
   {
     "id": "0003",
@@ -101,7 +109,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "exterior",
     "thumbSrc": "/images/photos/thumb/img_0003.webp",
-    "fullSrc": "/images/photos/full/img_0003.webp"
+    "fullSrc": "/images/photos/full/img_0003.webp",
+    "date": "2022.09.02",
+    "camera": "iPhone 11",
+    "lens": "広角カメラ 26mm f1.8"
   },
   {
     "id": "0004",
@@ -109,7 +120,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "exterior",
     "thumbSrc": "/images/photos/thumb/img_0004.webp",
-    "fullSrc": "/images/photos/full/img_0004.webp"
+    "fullSrc": "/images/photos/full/img_0004.webp",
+    "date": "2022.09.02",
+    "camera": "iPhone 11",
+    "lens": "広角カメラ 26mm f1.8"
   },
   {
     "id": "0005",
@@ -117,7 +131,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "exterior",
     "thumbSrc": "/images/photos/thumb/img_0005.webp",
-    "fullSrc": "/images/photos/full/img_0005.webp"
+    "fullSrc": "/images/photos/full/img_0005.webp",
+    "date": "2022.09.03",
+    "camera": "iPhone 11",
+    "lens": "広角カメラ 26mm f1.8"
   },
   {
     "id": "0006",
@@ -125,7 +142,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "cityscape",
     "thumbSrc": "/images/photos/thumb/img_0006.webp",
-    "fullSrc": "/images/photos/full/img_0006.webp"
+    "fullSrc": "/images/photos/full/img_0006.webp",
+    "date": "2022.09.03",
+    "camera": "iPhone 11",
+    "lens": "広角カメラ 26mm f1.8"
   },
   {
     "id": "0007",
@@ -133,7 +153,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "landscapes",
     "subSlug": "fireworks",
     "thumbSrc": "/images/photos/thumb/img_0007.webp",
-    "fullSrc": "/images/photos/full/img_0007.webp"
+    "fullSrc": "/images/photos/full/img_0007.webp",
+    "date": "2022.10.30",
+    "camera": "iPhone 11",
+    "lens": "広角カメラ 26mm f1.8"
   },
   {
     "id": "0008",
@@ -141,7 +164,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "landscapes",
     "subSlug": "mountains",
     "thumbSrc": "/images/photos/thumb/img_0008.webp",
-    "fullSrc": "/images/photos/full/img_0008.webp"
+    "fullSrc": "/images/photos/full/img_0008.webp",
+    "date": "2023.01.01",
+    "camera": "iPhone 11",
+    "lens": "広角カメラ 26mm f1.8"
   },
   {
     "id": "0009",
@@ -149,7 +175,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "objects",
     "thumbSrc": "/images/photos/thumb/img_0009.webp",
-    "fullSrc": "/images/photos/full/img_0009.webp"
+    "fullSrc": "/images/photos/full/img_0009.webp",
+    "date": "2023.06.02",
+    "camera": "iPhone 14 Pro",
+    "lens": "メインカメラ 24mm f1.78"
   },
   {
     "id": "0010",
@@ -157,7 +186,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "objects",
     "thumbSrc": "/images/photos/thumb/img_0010.webp",
-    "fullSrc": "/images/photos/full/img_0010.webp"
+    "fullSrc": "/images/photos/full/img_0010.webp",
+    "date": "2023.11.25",
+    "camera": "iPhone 14 Pro",
+    "lens": "超広角カメラ 13mm f2.2"
   },
   {
     "id": "0011",
@@ -165,7 +197,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "interior",
     "thumbSrc": "/images/photos/thumb/img_0011.webp",
-    "fullSrc": "/images/photos/full/img_0011.webp"
+    "fullSrc": "/images/photos/full/img_0011.webp",
+    "date": "2023.11.25",
+    "camera": "iPhone 14 Pro",
+    "lens": "メインカメラ 24mm f1.78"
   },
   {
     "id": "0012",
@@ -173,7 +208,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "cats",
     "thumbSrc": "/images/photos/thumb/img_0012.webp",
-    "fullSrc": "/images/photos/full/img_0012.webp"
+    "fullSrc": "/images/photos/full/img_0012.webp",
+    "date": "2024.02.14",
+    "camera": "iPhone 14 Pro",
+    "lens": "メインカメラ 24mm f1.78"
   },
   {
     "id": "0013",
@@ -181,7 +219,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "exterior",
     "thumbSrc": "/images/photos/thumb/img_0013.webp",
-    "fullSrc": "/images/photos/full/img_0013.webp"
+    "fullSrc": "/images/photos/full/img_0013.webp",
+    "date": "2024.04.04",
+    "camera": "iPhone 14 Pro",
+    "lens": "メインカメラ 24mm f1.78"
   },
   {
     "id": "0014",
@@ -189,7 +230,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "flowers",
     "thumbSrc": "/images/photos/thumb/img_0014.webp",
-    "fullSrc": "/images/photos/full/img_0014.webp"
+    "fullSrc": "/images/photos/full/img_0014.webp",
+    "date": "2024.04.04",
+    "camera": "iPhone 14 Pro",
+    "lens": "メインカメラ 24mm f1.78"
   },
   {
     "id": "0015",
@@ -197,7 +241,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "exterior",
     "thumbSrc": "/images/photos/thumb/img_0015.webp",
-    "fullSrc": "/images/photos/full/img_0015.webp"
+    "fullSrc": "/images/photos/full/img_0015.webp",
+    "date": "2024.04.05",
+    "camera": "iPhone 14 Pro",
+    "lens": "メインカメラ 24mm f1.78"
   },
   {
     "id": "0016",
@@ -205,7 +252,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "exterior",
     "thumbSrc": "/images/photos/thumb/img_0016.webp",
-    "fullSrc": "/images/photos/full/img_0016.webp"
+    "fullSrc": "/images/photos/full/img_0016.webp",
+    "date": "2024.04.05",
+    "camera": "iPhone 14 Pro",
+    "lens": "メインカメラ 24mm f1.78"
   },
   {
     "id": "0017",
@@ -213,7 +263,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0017.webp",
-    "fullSrc": "/images/photos/full/img_0017.webp"
+    "fullSrc": "/images/photos/full/img_0017.webp",
+    "date": "2024.04.05",
+    "camera": "iPhone 14 Pro",
+    "lens": "メインカメラ 24mm f1.78"
   },
   {
     "id": "0018",
@@ -229,7 +282,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "cityscape",
     "thumbSrc": "/images/photos/thumb/img_0019.webp",
-    "fullSrc": "/images/photos/full/img_0019.webp"
+    "fullSrc": "/images/photos/full/img_0019.webp",
+    "date": "2024.09.19",
+    "camera": "iPhone 14 Pro",
+    "lens": "メインカメラ 24mm f1.78"
   },
   {
     "id": "0020",
@@ -237,7 +293,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "exterior",
     "thumbSrc": "/images/photos/thumb/img_0020.webp",
-    "fullSrc": "/images/photos/full/img_0020.webp"
+    "fullSrc": "/images/photos/full/img_0020.webp",
+    "date": "2024.09.19",
+    "camera": "iPhone 14 Pro",
+    "lens": "メインカメラ 24mm f1.78"
   },
   {
     "id": "0021",
@@ -245,7 +304,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "exterior",
     "thumbSrc": "/images/photos/thumb/img_0021.webp",
-    "fullSrc": "/images/photos/full/img_0021.webp"
+    "fullSrc": "/images/photos/full/img_0021.webp",
+    "date": "2024.09.20",
+    "camera": "iPhone 14 Pro",
+    "lens": "メインカメラ 24mm f1.78"
   },
   {
     "id": "0022",
@@ -253,7 +315,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "interior",
     "thumbSrc": "/images/photos/thumb/img_0022.webp",
-    "fullSrc": "/images/photos/full/img_0022.webp"
+    "fullSrc": "/images/photos/full/img_0022.webp",
+    "date": "2024.09.20",
+    "camera": "unknown",
+    "lens": "Canon EF-S18-55mm f4-5.6 IS STM"
   },
   {
     "id": "0023",
@@ -261,7 +326,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "objects",
     "thumbSrc": "/images/photos/thumb/img_0023.webp",
-    "fullSrc": "/images/photos/full/img_0023.webp"
+    "fullSrc": "/images/photos/full/img_0023.webp",
+    "date": "2024.09.20",
+    "camera": "unknown",
+    "lens": "Canon EF-S18-55mm f4-5.6 IS STM"
   },
   {
     "id": "0024",
@@ -269,7 +337,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "objects",
     "thumbSrc": "/images/photos/thumb/img_0024.webp",
-    "fullSrc": "/images/photos/full/img_0024.webp"
+    "fullSrc": "/images/photos/full/img_0024.webp",
+    "date": "2024.09.20",
+    "camera": "unknown",
+    "lens": "Canon EF-S18-55mm f4-5.6 IS STM"
   },
   {
     "id": "0025",
@@ -277,7 +348,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "dogs",
     "thumbSrc": "/images/photos/thumb/img_0025.webp",
-    "fullSrc": "/images/photos/full/img_0025.webp"
+    "fullSrc": "/images/photos/full/img_0025.webp",
+    "date": "2025.02.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0026",
@@ -285,7 +359,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "interior",
     "thumbSrc": "/images/photos/thumb/img_0026.webp",
-    "fullSrc": "/images/photos/full/img_0026.webp"
+    "fullSrc": "/images/photos/full/img_0026.webp",
+    "date": "2025.02.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0027",
@@ -293,7 +370,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "dogs",
     "thumbSrc": "/images/photos/thumb/img_0027.webp",
-    "fullSrc": "/images/photos/full/img_0027.webp"
+    "fullSrc": "/images/photos/full/img_0027.webp",
+    "date": "2025.02.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0028",
@@ -301,7 +381,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "objects",
     "thumbSrc": "/images/photos/thumb/img_0028.webp",
-    "fullSrc": "/images/photos/full/img_0028.webp"
+    "fullSrc": "/images/photos/full/img_0028.webp",
+    "date": "2025.03.31",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0029",
@@ -309,7 +392,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "cityscape",
     "thumbSrc": "/images/photos/thumb/img_0029.webp",
-    "fullSrc": "/images/photos/full/img_0029.webp"
+    "fullSrc": "/images/photos/full/img_0029.webp",
+    "date": "2025.03.31",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0030",
@@ -317,7 +403,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "cityscape",
     "thumbSrc": "/images/photos/thumb/img_0030.webp",
-    "fullSrc": "/images/photos/full/img_0030.webp"
+    "fullSrc": "/images/photos/full/img_0030.webp",
+    "date": "2025.03.31",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0031",
@@ -325,7 +414,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "cityscape",
     "thumbSrc": "/images/photos/thumb/img_0031.webp",
-    "fullSrc": "/images/photos/full/img_0031.webp"
+    "fullSrc": "/images/photos/full/img_0031.webp",
+    "date": "2025.03.31",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0032",
@@ -333,7 +425,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "cityscape",
     "thumbSrc": "/images/photos/thumb/img_0032.webp",
-    "fullSrc": "/images/photos/full/img_0032.webp"
+    "fullSrc": "/images/photos/full/img_0032.webp",
+    "date": "2025.03.31",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0033",
@@ -341,7 +436,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "street",
     "thumbSrc": "/images/photos/thumb/img_0033.webp",
-    "fullSrc": "/images/photos/full/img_0033.webp"
+    "fullSrc": "/images/photos/full/img_0033.webp",
+    "date": "2025.03.31",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0034",
@@ -349,7 +447,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "cityscape",
     "thumbSrc": "/images/photos/thumb/img_0034.webp",
-    "fullSrc": "/images/photos/full/img_0034.webp"
+    "fullSrc": "/images/photos/full/img_0034.webp",
+    "date": "2025.04.01",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0035",
@@ -357,7 +458,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "exterior",
     "thumbSrc": "/images/photos/thumb/img_0035.webp",
-    "fullSrc": "/images/photos/full/img_0035.webp"
+    "fullSrc": "/images/photos/full/img_0035.webp",
+    "date": "2025.04.01",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0036",
@@ -365,7 +469,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0036.webp",
-    "fullSrc": "/images/photos/full/img_0036.webp"
+    "fullSrc": "/images/photos/full/img_0036.webp",
+    "date": "2025.04.08",
+    "camera": "iPhone 14 Pro",
+    "lens": "望遠カメラ 77mm f2.8"
   },
   {
     "id": "0037",
@@ -373,7 +480,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "others",
     "thumbSrc": "/images/photos/thumb/img_0037.webp",
-    "fullSrc": "/images/photos/full/img_0037.webp"
+    "fullSrc": "/images/photos/full/img_0037.webp",
+    "date" : "2025.04.08",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0038",
@@ -381,7 +491,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "details",
     "thumbSrc": "/images/photos/thumb/img_0038.webp",
-    "fullSrc": "/images/photos/full/img_0038.webp"
+    "fullSrc": "/images/photos/full/img_0038.webp",
+    "date" : "2025.04.08",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0039",
@@ -389,7 +502,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "objects",
     "thumbSrc": "/images/photos/thumb/img_0039.webp",
-    "fullSrc": "/images/photos/full/img_0039.webp"
+    "fullSrc": "/images/photos/full/img_0039.webp",
+    "date" : "2025.04.08",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0040",
@@ -397,7 +513,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "exterior",
     "thumbSrc": "/images/photos/thumb/img_0040.webp",
-    "fullSrc": "/images/photos/full/img_0040.webp"
+    "fullSrc": "/images/photos/full/img_0040.webp",
+    "date" : "2025.04.08",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0041",
@@ -405,7 +524,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "cityscape",
     "thumbSrc": "/images/photos/thumb/img_0041.webp",
-    "fullSrc": "/images/photos/full/img_0041.webp"
+    "fullSrc": "/images/photos/full/img_0041.webp",
+    "date" : "2025.04.08",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0042",
@@ -413,7 +535,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "cityscape",
     "thumbSrc": "/images/photos/thumb/img_0042.webp",
-    "fullSrc": "/images/photos/full/img_0042.webp"
+    "fullSrc": "/images/photos/full/img_0042.webp",
+    "date" : "2025.04.08",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0043",
@@ -421,7 +546,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "exterior",
     "thumbSrc": "/images/photos/thumb/img_0043.webp",
-    "fullSrc": "/images/photos/full/img_0043.webp"
+    "fullSrc": "/images/photos/full/img_0043.webp",
+    "date" : "2025.04.08",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0044",
@@ -429,7 +557,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "cats",
     "thumbSrc": "/images/photos/thumb/img_0044.webp",
-    "fullSrc": "/images/photos/full/img_0044.webp"
+    "fullSrc": "/images/photos/full/img_0044.webp",
+    "date" : "2025.04.08",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0045",
@@ -437,7 +568,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "exterior",
     "thumbSrc": "/images/photos/thumb/img_0045.webp",
-    "fullSrc": "/images/photos/full/img_0045.webp"
+    "fullSrc": "/images/photos/full/img_0045.webp",
+    "date" : "2025.04.08",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0046",
@@ -445,7 +579,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "fish",
     "thumbSrc": "/images/photos/thumb/img_0046.webp",
-    "fullSrc": "/images/photos/full/img_0046.webp"
+    "fullSrc": "/images/photos/full/img_0046.webp",
+    "date" : "2025.05.07",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0047",
@@ -453,7 +590,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "flowers",
     "thumbSrc": "/images/photos/thumb/img_0047.webp",
-    "fullSrc": "/images/photos/full/img_0047.webp"
+    "fullSrc": "/images/photos/full/img_0047.webp",
+    "date" : "2025.05.07",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0048",
@@ -461,7 +601,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "flowers",
     "thumbSrc": "/images/photos/thumb/img_0048.webp",
-    "fullSrc": "/images/photos/full/img_0048.webp"
+    "fullSrc": "/images/photos/full/img_0048.webp",
+    "date" : "2025.05.07",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0049",
@@ -469,7 +612,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "flowers",
     "thumbSrc": "/images/photos/thumb/img_0049.webp",
-    "fullSrc": "/images/photos/full/img_0049.webp"
+    "fullSrc": "/images/photos/full/img_0049.webp",
+    "date" : "2025.05.07",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0050",
@@ -477,7 +623,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "flowers",
     "thumbSrc": "/images/photos/thumb/img_0050.webp",
-    "fullSrc": "/images/photos/full/img_0050.webp"
+    "fullSrc": "/images/photos/full/img_0050.webp",
+    "date" : "2025.05.07",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0051",
@@ -485,7 +634,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "flowers",
     "thumbSrc": "/images/photos/thumb/img_0051.webp",
-    "fullSrc": "/images/photos/full/img_0051.webp"
+    "fullSrc": "/images/photos/full/img_0051.webp",
+    "date" : "2025.05.07",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0052",
@@ -493,7 +645,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "flowers",
     "thumbSrc": "/images/photos/thumb/img_0052.webp",
-    "fullSrc": "/images/photos/full/img_0052.webp"
+    "fullSrc": "/images/photos/full/img_0052.webp",
+    "date" : "2025.05.07",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0053",
@@ -501,7 +656,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "food",
     "subSlug": "desserts",
     "thumbSrc": "/images/photos/thumb/img_0053.webp",
-    "fullSrc": "/images/photos/full/img_0053.webp"
+    "fullSrc": "/images/photos/full/img_0053.webp",
+    "date" : "2025.05.17",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0054",
@@ -509,7 +667,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "cats",
     "thumbSrc": "/images/photos/thumb/img_0054.webp",
-    "fullSrc": "/images/photos/full/img_0054.webp"
+    "fullSrc": "/images/photos/full/img_0054.webp",
+    "date" : "2025.05.17",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0055",
@@ -517,7 +678,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "cityscape",
     "thumbSrc": "/images/photos/thumb/img_0055.webp",
-    "fullSrc": "/images/photos/full/img_0055.webp"
+    "fullSrc": "/images/photos/full/img_0055.webp",
+    "date" : "2025.05.17",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0056",
@@ -525,7 +689,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "cityscape",
     "thumbSrc": "/images/photos/thumb/img_0056.webp",
-    "fullSrc": "/images/photos/full/img_0056.webp"
+    "fullSrc": "/images/photos/full/img_0056.webp",
+    "date" : "2025.05.17",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0057",
@@ -533,7 +700,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "objects",
     "thumbSrc": "/images/photos/thumb/img_0057.webp",
-    "fullSrc": "/images/photos/full/img_0057.webp"
+    "fullSrc": "/images/photos/full/img_0057.webp",
+    "date" : "2025.06.07",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0058",
@@ -541,7 +711,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "objects",
     "thumbSrc": "/images/photos/thumb/img_0058.webp",
-    "fullSrc": "/images/photos/full/img_0058.webp"
+    "fullSrc": "/images/photos/full/img_0058.webp",
+    "date" : "2025.08.22",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0059",
@@ -549,7 +722,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "objects",
     "thumbSrc": "/images/photos/thumb/img_0059.webp",
-    "fullSrc": "/images/photos/full/img_0059.webp"
+    "fullSrc": "/images/photos/full/img_0059.webp",
+    "date" : "2025.08.22",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0060",
@@ -557,7 +733,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "cityscape",
     "thumbSrc": "/images/photos/thumb/img_0060.webp",
-    "fullSrc": "/images/photos/full/img_0060.webp"
+    "fullSrc": "/images/photos/full/img_0060.webp",
+    "date" : "2025.08.22",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0061",
@@ -565,7 +744,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "landscapes",
     "subSlug": "fireworks",
     "thumbSrc": "/images/photos/thumb/img_0061.webp",
-    "fullSrc": "/images/photos/full/img_0061.webp"
+    "fullSrc": "/images/photos/full/img_0061.webp",
+    "date" : "2025.08.22",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0062",
@@ -573,7 +755,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "landscapes",
     "subSlug": "fireworks",
     "thumbSrc": "/images/photos/thumb/img_0062.webp",
-    "fullSrc": "/images/photos/full/img_0062.webp"
+    "fullSrc": "/images/photos/full/img_0062.webp",
+    "date" : "2025.08.22",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0063",
@@ -581,7 +766,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "landscapes",
     "subSlug": "fireworks",
     "thumbSrc": "/images/photos/thumb/img_0063.webp",
-    "fullSrc": "/images/photos/full/img_0063.webp"
+    "fullSrc": "/images/photos/full/img_0063.webp",
+    "date" : "2025.08.22",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0064",
@@ -589,7 +777,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "exterior",
     "thumbSrc": "/images/photos/thumb/img_0064.webp",
-    "fullSrc": "/images/photos/full/img_0064.webp"
+    "fullSrc": "/images/photos/full/img_0064.webp",
+    "date" : "2025.09.23",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0065",
@@ -597,7 +788,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "landscapes",
     "subSlug": "seascapes",
     "thumbSrc": "/images/photos/thumb/img_0065.webp",
-    "fullSrc": "/images/photos/full/img_0065.webp"
+    "fullSrc": "/images/photos/full/img_0065.webp",
+    "date" : "2025.09.24",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0066",
@@ -605,7 +799,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "street",
     "thumbSrc": "/images/photos/thumb/img_0066.webp",
-    "fullSrc": "/images/photos/full/img_0066.webp"
+    "fullSrc": "/images/photos/full/img_0066.webp",
+    "date" : "2025.09.24",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0067",
@@ -613,7 +810,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "exterior",
     "thumbSrc": "/images/photos/thumb/img_0067.webp",
-    "fullSrc": "/images/photos/full/img_0067.webp"
+    "fullSrc": "/images/photos/full/img_0067.webp",
+    "date" : "2025.09.24",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0068",
@@ -621,7 +821,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "cats",
     "thumbSrc": "/images/photos/thumb/img_0068.webp",
-    "fullSrc": "/images/photos/full/img_0068.webp"
+    "fullSrc": "/images/photos/full/img_0068.webp",
+    "date" : "2025.09.24",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0069",
@@ -629,7 +832,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "art",
     "thumbSrc": "/images/photos/thumb/img_0069.webp",
-    "fullSrc": "/images/photos/full/img_0069.webp"
+    "fullSrc": "/images/photos/full/img_0069.webp",
+    "date" : "2025.09.24",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0070",
@@ -637,7 +843,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "landscapes",
     "subSlug": "seascapes",
     "thumbSrc": "/images/photos/thumb/img_0070.webp",
-    "fullSrc": "/images/photos/full/img_0070.webp"
+    "fullSrc": "/images/photos/full/img_0070.webp",
+    "date" : "2025.09.24",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0071",
@@ -645,7 +854,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "art",
     "thumbSrc": "/images/photos/thumb/img_0071.webp",
-    "fullSrc": "/images/photos/full/img_0071.webp"
+    "fullSrc": "/images/photos/full/img_0071.webp",
+    "date" : "2025.09.24",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0072",
@@ -653,7 +865,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "marine life",
     "thumbSrc": "/images/photos/thumb/img_0072.webp",
-    "fullSrc": "/images/photos/full/img_0072.webp"
+    "fullSrc": "/images/photos/full/img_0072.webp",
+    "date" : "2025.09.25",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0073",
@@ -661,7 +876,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "birds",
     "thumbSrc": "/images/photos/thumb/img_0073.webp",
-    "fullSrc": "/images/photos/full/img_0073.webp"
+    "fullSrc": "/images/photos/full/img_0073.webp",
+    "date" : "2025.09.25",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0074",
@@ -669,7 +887,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "marine life",
     "thumbSrc": "/images/photos/thumb/img_0074.webp",
-    "fullSrc": "/images/photos/full/img_0074.webp"
+    "fullSrc": "/images/photos/full/img_0074.webp",
+    "date" : "2025.09.25",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0075",
@@ -677,7 +898,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "marine life",
     "thumbSrc": "/images/photos/thumb/img_0075.webp",
-    "fullSrc": "/images/photos/full/img_0075.webp"
+    "fullSrc": "/images/photos/full/img_0075.webp",
+    "date" : "2025.09.25",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0076",
@@ -685,7 +909,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "marine life",
     "thumbSrc": "/images/photos/thumb/img_0076.webp",
-    "fullSrc": "/images/photos/full/img_0076.webp"
+    "fullSrc": "/images/photos/full/img_0076.webp",
+    "date" : "2025.09.25",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0077",
@@ -693,7 +920,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "fish",
     "thumbSrc": "/images/photos/thumb/img_0077.webp",
-    "fullSrc": "/images/photos/full/img_0077.webp"
+    "fullSrc": "/images/photos/full/img_0077.webp",
+    "date" : "2025.09.25",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0078",
@@ -701,7 +931,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "fish",
     "thumbSrc": "/images/photos/thumb/img_0078.webp",
-    "fullSrc": "/images/photos/full/img_0078.webp"
+    "fullSrc": "/images/photos/full/img_0078.webp",
+    "date" : "2025.09.25",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0079",
@@ -709,7 +942,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "exterior",
     "thumbSrc": "/images/photos/thumb/img_0079.webp",
-    "fullSrc": "/images/photos/full/img_0079.webp"
+    "fullSrc": "/images/photos/full/img_0079.webp",
+    "date" : "2025.11.18",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0080",
@@ -717,7 +953,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "leaves",
     "thumbSrc": "/images/photos/thumb/img_0080.webp",
-    "fullSrc": "/images/photos/full/img_0080.webp"
+    "fullSrc": "/images/photos/full/img_0080.webp",
+    "date" : "2025.11.18",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0081",
@@ -725,7 +964,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "details",
     "thumbSrc": "/images/photos/thumb/img_0081.webp",
-    "fullSrc": "/images/photos/full/img_0081.webp"
+    "fullSrc": "/images/photos/full/img_0081.webp",
+    "date" : "2025.11.18",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0082",
@@ -733,7 +975,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "objects",
     "thumbSrc": "/images/photos/thumb/img_0082.webp",
-    "fullSrc": "/images/photos/full/img_0082.webp"
+    "fullSrc": "/images/photos/full/img_0082.webp",
+    "date" : "2025.11.18",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0083",
@@ -741,7 +986,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "marine life",
     "thumbSrc": "/images/photos/thumb/img_0083.webp",
-    "fullSrc": "/images/photos/full/img_0083.webp"
+    "fullSrc": "/images/photos/full/img_0083.webp",
+    "date" : "2025.11.18",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0084",
@@ -749,7 +997,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "marine life",
     "thumbSrc": "/images/photos/thumb/img_0084.webp",
-    "fullSrc": "/images/photos/full/img_0084.webp"
+    "fullSrc": "/images/photos/full/img_0084.webp",
+    "date" : "2025.11.18",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0085",
@@ -757,7 +1008,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "marine life",
     "thumbSrc": "/images/photos/thumb/img_0085.webp",
-    "fullSrc": "/images/photos/full/img_0085.webp"
+    "fullSrc": "/images/photos/full/img_0085.webp",
+    "date" : "2025.11.18",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0086",
@@ -765,7 +1019,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "objects",
     "thumbSrc": "/images/photos/thumb/img_0086.webp",
-    "fullSrc": "/images/photos/full/img_0086.webp"
+    "fullSrc": "/images/photos/full/img_0086.webp",
+    "date" : "2025.11.18",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0087",
@@ -773,7 +1030,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "exterior",
     "thumbSrc": "/images/photos/thumb/img_0087.webp",
-    "fullSrc": "/images/photos/full/img_0087.webp"
+    "fullSrc": "/images/photos/full/img_0087.webp",
+    "date" : "2025.11.18",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0088",
@@ -781,7 +1041,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "street",
     "thumbSrc": "/images/photos/thumb/img_0088.webp",
-    "fullSrc": "/images/photos/full/img_0088.webp"
+    "fullSrc": "/images/photos/full/img_0088.webp",
+    "date" : "2025.11.18",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0089",
@@ -789,7 +1052,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "food",
     "subSlug": "dishes",
     "thumbSrc": "/images/photos/thumb/img_0089.webp",
-    "fullSrc": "/images/photos/full/img_0089.webp"
+    "fullSrc": "/images/photos/full/img_0089.webp",
+    "date" : "2025.11.18",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0090",
@@ -797,7 +1063,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "objects",
     "thumbSrc": "/images/photos/thumb/img_0090.webp",
-    "fullSrc": "/images/photos/full/img_0090.webp"
+    "fullSrc": "/images/photos/full/img_0090.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0091",
@@ -805,7 +1074,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0091.webp",
-    "fullSrc": "/images/photos/full/img_0091.webp"
+    "fullSrc": "/images/photos/full/img_0091.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0092",
@@ -813,7 +1085,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "flowers",
     "thumbSrc": "/images/photos/thumb/img_0092.webp",
-    "fullSrc": "/images/photos/full/img_0092.webp"
+    "fullSrc": "/images/photos/full/img_0092.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0093",
@@ -821,7 +1096,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "leaves",
     "thumbSrc": "/images/photos/thumb/img_0093.webp",
-    "fullSrc": "/images/photos/full/img_0093.webp"
+    "fullSrc": "/images/photos/full/img_0093.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0094",
@@ -829,7 +1107,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "leaves",
     "thumbSrc": "/images/photos/thumb/img_0094.webp",
-    "fullSrc": "/images/photos/full/img_0094.webp"
+    "fullSrc": "/images/photos/full/img_0094.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0095",
@@ -837,7 +1118,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0095.webp",
-    "fullSrc": "/images/photos/full/img_0095.webp"
+    "fullSrc": "/images/photos/full/img_0095.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0096",
@@ -845,7 +1129,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0096.webp",
-    "fullSrc": "/images/photos/full/img_0096.webp"
+    "fullSrc": "/images/photos/full/img_0096.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0097",
@@ -853,7 +1140,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "leaves",
     "thumbSrc": "/images/photos/thumb/img_0097.webp",
-    "fullSrc": "/images/photos/full/img_0097.webp"
+    "fullSrc": "/images/photos/full/img_0097.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0098",
@@ -861,7 +1151,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "leaves",
     "thumbSrc": "/images/photos/thumb/img_0098.webp",
-    "fullSrc": "/images/photos/full/img_0098.webp"
+    "fullSrc": "/images/photos/full/img_0098.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0099",
@@ -869,7 +1162,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0099.webp",
-    "fullSrc": "/images/photos/full/img_0099.webp"
+    "fullSrc": "/images/photos/full/img_0099.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0100",
@@ -877,7 +1173,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0100.webp",
-    "fullSrc": "/images/photos/full/img_0100.webp"
+    "fullSrc": "/images/photos/full/img_0100.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0101",
@@ -885,7 +1184,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0101.webp",
-    "fullSrc": "/images/photos/full/img_0101.webp"
+    "fullSrc": "/images/photos/full/img_0101.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0102",
@@ -893,7 +1195,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0102.webp",
-    "fullSrc": "/images/photos/full/img_0102.webp"
+    "fullSrc": "/images/photos/full/img_0102.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0103",
@@ -901,7 +1206,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0103.webp",
-    "fullSrc": "/images/photos/full/img_0103.webp"
+    "fullSrc": "/images/photos/full/img_0103.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0104",
@@ -909,7 +1217,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0104.webp",
-    "fullSrc": "/images/photos/full/img_0104.webp"
+    "fullSrc": "/images/photos/full/img_0104.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0105",
@@ -917,7 +1228,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0105.webp",
-    "fullSrc": "/images/photos/full/img_0105.webp"
+    "fullSrc": "/images/photos/full/img_0105.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0106",
@@ -925,7 +1239,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "architecture",
     "subSlug": "exterior",
     "thumbSrc": "/images/photos/thumb/img_0106.webp",
-    "fullSrc": "/images/photos/full/img_0106.webp"
+    "fullSrc": "/images/photos/full/img_0106.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0107",
@@ -933,7 +1250,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0107.webp",
-    "fullSrc": "/images/photos/full/img_0107.webp"
+    "fullSrc": "/images/photos/full/img_0107.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0108",
@@ -941,7 +1261,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "leaves",
     "thumbSrc": "/images/photos/thumb/img_0108.webp",
-    "fullSrc": "/images/photos/full/img_0108.webp"
+    "fullSrc": "/images/photos/full/img_0108.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0109",
@@ -949,7 +1272,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0109.webp",
-    "fullSrc": "/images/photos/full/img_0109.webp"
+    "fullSrc": "/images/photos/full/img_0109.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0110",
@@ -957,7 +1283,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0110.webp",
-    "fullSrc": "/images/photos/full/img_0110.webp"
+    "fullSrc": "/images/photos/full/img_0110.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0111",
@@ -965,7 +1294,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0111.webp",
-    "fullSrc": "/images/photos/full/img_0111.webp"
+    "fullSrc": "/images/photos/full/img_0111.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0112",
@@ -973,7 +1305,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0112.webp",
-    "fullSrc": "/images/photos/full/img_0112.webp"
+    "fullSrc": "/images/photos/full/img_0112.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0113",
@@ -981,7 +1316,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0113.webp",
-    "fullSrc": "/images/photos/full/img_0113.webp"
+    "fullSrc": "/images/photos/full/img_0113.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0114",
@@ -989,7 +1327,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0114.webp",
-    "fullSrc": "/images/photos/full/img_0114.webp"
+    "fullSrc": "/images/photos/full/img_0114.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0115",
@@ -997,7 +1338,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "trees",
     "thumbSrc": "/images/photos/thumb/img_0115.webp",
-    "fullSrc": "/images/photos/full/img_0115.webp"
+    "fullSrc": "/images/photos/full/img_0115.webp",
+    "date" : "2025.11.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0116",
@@ -1005,7 +1349,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "others",
     "thumbSrc": "/images/photos/thumb/img_0116.webp",
-    "fullSrc": "/images/photos/full/img_0116.webp"
+    "fullSrc": "/images/photos/full/img_0116.webp",
+    "date" : "2025.12.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0117",
@@ -1013,7 +1360,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "birds",
     "thumbSrc": "/images/photos/thumb/img_0117.webp",
-    "fullSrc": "/images/photos/full/img_0117.webp"
+    "fullSrc": "/images/photos/full/img_0117.webp",
+    "date" : "2025.12.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0118",
@@ -1021,7 +1371,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "others",
     "thumbSrc": "/images/photos/thumb/img_0118.webp",
-    "fullSrc": "/images/photos/full/img_0118.webp"
+    "fullSrc": "/images/photos/full/img_0118.webp",
+    "date" : "2025.12.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0119",
@@ -1029,7 +1382,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "others",
     "thumbSrc": "/images/photos/thumb/img_0119.webp",
-    "fullSrc": "/images/photos/full/img_0119.webp"
+    "fullSrc": "/images/photos/full/img_0119.webp",
+    "date" : "2025.12.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0120",
@@ -1037,7 +1393,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "others",
     "thumbSrc": "/images/photos/thumb/img_0120.webp",
-    "fullSrc": "/images/photos/full/img_0120.webp"
+    "fullSrc": "/images/photos/full/img_0120.webp",
+    "date" : "2025.12.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0121",
@@ -1045,7 +1404,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "plants",
     "subSlug": "flowers",
     "thumbSrc": "/images/photos/thumb/img_0121.webp",
-    "fullSrc": "/images/photos/full/img_0121.webp"
+    "fullSrc": "/images/photos/full/img_0121.webp",
+    "date" : "2025.12.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0122",
@@ -1053,7 +1415,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "marine life",
     "thumbSrc": "/images/photos/thumb/img_0122.webp",
-    "fullSrc": "/images/photos/full/img_0122.webp"
+    "fullSrc": "/images/photos/full/img_0122.webp",
+    "date" : "2025.12.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0123",
@@ -1061,7 +1426,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "marine life",
     "thumbSrc": "/images/photos/thumb/img_0123.webp",
-    "fullSrc": "/images/photos/full/img_0123.webp"
+    "fullSrc": "/images/photos/full/img_0123.webp",
+    "date" : "2025.12.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0124",
@@ -1069,7 +1437,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "marine life",
     "thumbSrc": "/images/photos/thumb/img_0124.webp",
-    "fullSrc": "/images/photos/full/img_0124.webp"
+    "fullSrc": "/images/photos/full/img_0124.webp",
+    "date" : "2025.12.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0125",
@@ -1077,7 +1448,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "art",
     "thumbSrc": "/images/photos/thumb/img_0125.webp",
-    "fullSrc": "/images/photos/full/img_0125.webp"
+    "fullSrc": "/images/photos/full/img_0125.webp",
+    "date" : "2025.12.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0126",
@@ -1085,7 +1459,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "art",
     "thumbSrc": "/images/photos/thumb/img_0126.webp",
-    "fullSrc": "/images/photos/full/img_0126.webp"
+    "fullSrc": "/images/photos/full/img_0126.webp",
+    "date" : "2025.12.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0127",
@@ -1093,7 +1470,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "art",
     "thumbSrc": "/images/photos/thumb/img_0127.webp",
-    "fullSrc": "/images/photos/full/img_0127.webp"
+    "fullSrc": "/images/photos/full/img_0127.webp",
+    "date" : "2025.12.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0128",
@@ -1101,7 +1481,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "art",
     "thumbSrc": "/images/photos/thumb/img_0128.webp",
-    "fullSrc": "/images/photos/full/img_0128.webp"
+    "fullSrc": "/images/photos/full/img_0128.webp",
+    "date" : "2025.12.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0129",
@@ -1109,7 +1492,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "art",
     "thumbSrc": "/images/photos/thumb/img_0129.webp",
-    "fullSrc": "/images/photos/full/img_0129.webp"
+    "fullSrc": "/images/photos/full/img_0129.webp",
+    "date" : "2025.12.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0130",
@@ -1117,7 +1503,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "animals",
     "subSlug": "marine life",
     "thumbSrc": "/images/photos/thumb/img_0130.webp",
-    "fullSrc": "/images/photos/full/img_0130.webp"
+    "fullSrc": "/images/photos/full/img_0130.webp",
+    "date" : "2025.12.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0131",
@@ -1125,7 +1514,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "art",
     "thumbSrc": "/images/photos/thumb/img_0131.webp",
-    "fullSrc": "/images/photos/full/img_0131.webp"
+    "fullSrc": "/images/photos/full/img_0131.webp",
+    "date" : "2025.12.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0132",
@@ -1133,7 +1525,10 @@ export const photos: PhotoItem[] = [
     "categorySlug": "food",
     "subSlug": "desserts",
     "thumbSrc": "/images/photos/thumb/img_0132.webp",
-    "fullSrc": "/images/photos/full/img_0132.webp"
+    "fullSrc": "/images/photos/full/img_0132.webp",
+    "date" : "2025.12.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   },
   {
     "id": "0133",
@@ -1141,6 +1536,9 @@ export const photos: PhotoItem[] = [
     "categorySlug": "snapshot",
     "subSlug": "art",
     "thumbSrc": "/images/photos/thumb/img_0133.webp",
-    "fullSrc": "/images/photos/full/img_0133.webp"
+    "fullSrc": "/images/photos/full/img_0133.webp",
+    "date" : "2025.12.26",
+    "camera": "Nikon Z50II",
+    "lens": "NIKKOR Z DX 16-50mm f/3.5-6.3 VR"
   }
 ];
