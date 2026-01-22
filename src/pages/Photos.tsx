@@ -218,40 +218,70 @@ const Photos = ()=>{
             </div>
 
             {/* mobile:panel */}
-            {isPanelOpen && (
-                <div className={styles.mobilePanel}>
-                    <div className={styles.mobilePanelTop}>
-                        <button
-                            type="button"
-                            className={styles.mobileClose}
-                            onClick={()=>{
-                                setIsPanelOpen(false)
-                                setOpenCategory(null);
-                            }}
-                        >
-                            Close <span>▲</span>
-                        </button>
-                    </div>
+            <div
+                className={`${styles.mobilePanel} ${isPanelOpen ? styles.mobilePanelOpen : ""}`}
+                aria-hidden={!isPanelOpen}
+            >
+                <div className={styles.mobilePanelTop}>
+                    <button
+                        type="button"
+                        className={styles.mobileClose}
+                        onClick={()=>{
+                            setIsPanelOpen(false)
+                            setOpenCategory(null);
+                        }}
+                    >
+                        Close <span>▲</span>
+                    </button>
+                </div>
 
-                    <div className={styles.mobileCatList}>
-                        {!openCategory ? (
-                            <>
-                                <Link
-                                    to="/photos"
-                                    className={`${styles.linkBtnMobile} ${isActiveAll ? styles.isActive : ""}`}
-                                    onClick={()=>{
-                                        setOpenCategory(null);
-                                        setIsPanelOpen(false);
-                                    }}
-                                >
-                                    Category
-                                </Link>
+                <div className={styles.mobileCatList}>
+                    {!openCategory ? (
+                        <>
+                            <Link
+                                to="/photos"
+                                className={`${styles.linkBtnMobile} ${isActiveAll ? styles.isActive : ""}`}
+                                onClick={()=>{
+                                    setOpenCategory(null);
+                                    setIsPanelOpen(false);
+                                }}
+                            >
+                                Category
+                            </Link>
 
-                                {sortedCategories.map((cat)=>(
-                                    <div key={cat.slug} className={styles.mobileCatRow}>
-                                        <Link
-                                            to={`/photos/${cat.slug}`}
-                                            className={`${styles.linkBtnMobile} ${isActiveCategory(cat.slug) ? styles.isActive : ""}`}
+                            {sortedCategories.map((cat)=>(
+                                <div key={cat.slug} className={styles.mobileCatRow}>
+                                    <Link
+                                        to={`/photos/${cat.slug}`}
+                                        className={`${styles.linkBtnMobile} ${isActiveCategory(cat.slug) ? styles.isActive : ""}`}
+                                        onClick={()=>setIsPanelOpen(false)}
+                                    >
+                                        {cat.name}
+                                    </Link>
+
+                                    <button
+                                        type="button"
+                                        className={styles.expandBtnMobile}
+                                        onClick={()=>setOpenCategory(cat.slug)}
+                                        aria-label={`${cat.name} subcategories`}
+                                    >
+                                        <span className={styles.catOpenBtn}/>
+                                        <span className={styles.catOpenBtn}/>
+                                        <span className={styles.catOpenBtn}/>
+                                    </button>
+                                </div>
+                            ))}
+                        </>
+                    ) : (
+                        (()=>{
+                            const cat = photoCategories.find((c)=>c.slug === openCategory);
+                            if(!cat) return null;
+
+                            return(
+                                <div className={styles.mobileSubLayout}>
+                                    <div className={styles.mobileOpenCat}>
+                                        <Link to={`/photos/${cat.slug}`}
+                                            className={styles.mobileOpenCatLink}
                                             onClick={()=>setIsPanelOpen(false)}
                                         >
                                             {cat.name}
@@ -260,63 +290,34 @@ const Photos = ()=>{
                                         <button
                                             type="button"
                                             className={styles.expandBtnMobile}
-                                            onClick={()=>setOpenCategory(cat.slug)}
-                                            aria-label={`${cat.name} subcategories`}
+                                            onClick={()=>setOpenCategory(null)}
+                                            aria-label="close category"
                                         >
-                                            <span className={styles.catOpenBtn}/>
-                                            <span className={styles.catOpenBtn}/>
-                                            <span className={styles.catOpenBtn}/>
+                                            <span className={styles.catCloseBtn}/>
+                                            <span className={styles.catCloseBtn}/>
+                                            <span className={styles.catCloseBtn}/>
                                         </button>
                                     </div>
-                                ))}
-                            </>
-                        ) : (
-                            (()=>{
-                                const cat = photoCategories.find((c)=>c.slug === openCategory);
-                                if(!cat) return null;
 
-                                return(
-                                    <div className={styles.mobileSubLayout}>
-                                        <div className={styles.mobileOpenCat}>
-                                            <Link to={`/photos/${cat.slug}`}
-                                                className={styles.mobileOpenCatLink}
-                                                onClick={()=>setIsPanelOpen(false)}
-                                            >
-                                                {cat.name}
-                                            </Link>
-
-                                            <button
-                                                type="button"
-                                                className={styles.expandBtnMobile}
-                                                onClick={()=>setOpenCategory(null)}
-                                                aria-label="close category"
-                                            >
-                                                <span className={styles.catCloseBtn}/>
-                                                <span className={styles.catCloseBtn}/>
-                                                <span className={styles.catCloseBtn}/>
-                                            </button>
-                                        </div>
-
-                                        <ul className={styles.mobileSubList}>
-                                            {cat.subcategories.map((sub)=>(
-                                                <li key={sub.slug}>
-                                                    <Link
-                                                        to={`/photos/${cat.slug}/${sub.slug}`}
-                                                        className={`${styles.linkBtnMobile} ${isActiveSub(cat.slug, sub.slug) ? styles.isActive : ""}`}
-                                                        onClick={()=>setIsPanelOpen(false)}
-                                                    >
-                                                        {sub.name}
-                                                    </Link>
-                                                </li>
-                                            ))}
-                                        </ul>
-                                    </div>
-                                )
-                            })()
-                        )}
-                    </div>
+                                    <ul className={styles.mobileSubList}>
+                                        {cat.subcategories.map((sub)=>(
+                                            <li key={sub.slug}>
+                                                <Link
+                                                    to={`/photos/${cat.slug}/${sub.slug}`}
+                                                    className={`${styles.linkBtnMobile} ${isActiveSub(cat.slug, sub.slug) ? styles.isActive : ""}`}
+                                                    onClick={()=>setIsPanelOpen(false)}
+                                                >
+                                                    {sub.name}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            )
+                        })()
+                    )}
                 </div>
-            )}
+            </div>
 
             {/* grid */}
             <div className={styles.grid}>

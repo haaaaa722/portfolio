@@ -206,10 +206,22 @@
 
 /* mobile panel */
 .mobilePanel{
-    padding: 10px;
     position: relative;
+    width: 100%;
+    z-index: 10;
+    background: var(--photos-bg);
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transition: max-height 0.3s ease, opacity 0.2s ease;
+}
+
+.mobilePanelOpen{
+    max-height: 50vh;
+    opacity: 1;
+    pointer-events: auto;
     padding-bottom: 3.5rem;
-    margin-top: -4rem;
 }
 
 .mobilePanelTop{
