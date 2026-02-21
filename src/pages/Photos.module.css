@@ -164,7 +164,7 @@
 
 /* subcategoryを右に */
 .linkBtn{
-    display: inline-flex;
+    display: inline-block;
     align-items: center;
     gap: 10px;
 
@@ -172,6 +172,24 @@
     color: var(--text-color);
     white-space: nowrap;
     text-decoration: none;
+    position: relative;
+}
+
+.linkBtn::after{
+    background: var(--text-color);
+    bottom: -1px;
+    content: "";
+    height: 0.1rem;
+    left: 0;
+    position: absolute;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.linkBtn:hover::after{
+    transform: scale(1, 1);
 }
 
 .isActive{
@@ -197,6 +215,12 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
+
+    transition: transform 0.3s ease;
+}
+
+.mobileCategoryTrigger:hover{
+    transform: translateY(-40%);
 }
 
 .chev{
@@ -247,6 +271,13 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
+
+
+    transition: transform 0.3s ease;
+}
+
+.mobileClose:hover{
+    transform: translateY(-10%);
 }
 
 .mobileCatList{
@@ -279,8 +310,26 @@
     color: var(--text-color);
     text-decoration: none;
     white-space: nowrap;
-    display: inline-flex;
+    display: inline-block;
     align-items: center;
+    position: relative;
+}
+
+.linkBtnMobile::after{
+    background: var(--text-color);
+    bottom: -1px;
+    content: "";
+    height: 0.1rem;
+    left: 0;
+    position: absolute;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.linkBtnMobile:hover::after{
+    transform: scale(1, 1);
 }
 
 /* mobile: subcategory */
