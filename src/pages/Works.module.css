@@ -45,7 +45,7 @@
 
 .catBtn{
     position: relative;
-    display: inline-flex;
+    display: inline-block;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
@@ -54,6 +54,23 @@
     color: var(--home-bg);
     mix-blend-mode: difference;
     z-index: 1;
+}
+
+.catBtn::after{
+    background: var(--text-color);
+    bottom: -1px;
+    content: "";
+    height: 0.1rem;
+    left: 0;
+    position: absolute;
+    transform: scale(0, 1);
+    transform-origin: left top;
+    transition: transform 0.3s ease;
+    width: 100%;
+}
+
+.catBtn:hover::after{
+    transform: scale(1, 1);
 }
 
 .highlighter{
