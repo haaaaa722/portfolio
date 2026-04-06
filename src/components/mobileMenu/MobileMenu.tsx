@@ -4,25 +4,12 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faUser, faLayerGroup, faImages } from "@fortawesome/free-solid-svg-icons";
 import styles from "./MobileMenu.module.css";
 
-type Props = {
-    navigateWithRipple:(
-        e: React.MouseEvent<HTMLAnchorElement>,
-        path: string
-        ) => void;
-}
-
-const MobileMenu: React.FC<Props> = ({ navigateWithRipple }) => {
+const MobileMenu = ()=>{
     // メニューの開閉状態管理
     const [isOpen, setIsOpen] = useState(false);
 
     // 移動でメニューを閉じる的な
-    const handleNavigation = (
-        e: React.MouseEvent<HTMLAnchorElement>,
-        path: string
-    )=>{
-        setIsOpen(false);
-        navigateWithRipple(e, path);
-    };
+    const closeMenu = ()=> setIsOpen(false);
 
     return(
         <div className={styles.mobilemenu}>
@@ -35,22 +22,22 @@ const MobileMenu: React.FC<Props> = ({ navigateWithRipple }) => {
             <nav className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
                 <ul className={styles.navlist}>
                     <li>
-                        <Link to="/" onClick={(e) => handleNavigation(e, "/")}>
+                        <Link to="/" onClick={closeMenu}>
                             <FontAwesomeIcon icon={faHouse} />
                         </Link>
                     </li>
                     <li>
-                        <Link to="/about" onClick={(e) => handleNavigation(e, "/about")}>
+                        <Link to="/about" onClick={closeMenu}>
                             <FontAwesomeIcon icon={faUser} />
                         </Link>
                     </li>
                     <li>
-                        <Link to="/works" onClick={(e) => handleNavigation(e, "/works")}>
+                        <Link to="/works" onClick={closeMenu}>
                             <FontAwesomeIcon icon={faLayerGroup} />
                         </Link>
                     </li>
                     <li>
-                        <Link to="/photos" onClick={(e) => handleNavigation(e, "/photos")}>
+                        <Link to="/photos" onClick={closeMenu}>
                             <FontAwesomeIcon icon={faImages} />
                         </Link>
                     </li>
