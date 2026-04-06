@@ -99,6 +99,23 @@
     max-height: 100vh;
 }
 
+.contactbtn{
+    height: 2rem;
+    font-size: 1rem;
+    padding: 0 25px;
+    border-radius: 1.5rem;
+    background: var(--text-color);
+    color: var(--home-bg);
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: fit-content;
+    margin: 1.5rem auto 0;
+}
+
 /* tablet */
 @media (min-width: 768px){
 }

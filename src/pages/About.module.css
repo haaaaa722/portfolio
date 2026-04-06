@@ -29,24 +29,6 @@
     margin-bottom: 1rem;
 }
 
-.linkItemsWrapper{
-    display: flex;
-    gap: 1vw;
-}
-
-.linkItem{
-    width: 20vw;
-    max-width: 150px;
-    height: 20vw;
-    max-height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1.5px solid var(--text-color);
-    border-radius: 50%;
-    font-size: 8vw;
-}
-
 .contact p{
     margin: 0;
     word-break: keep-all;
@@ -73,9 +55,5 @@
 @media (min-width: 768px) {
     .container{
         padding-top: 4rem;
-    }
-
-    .linkItem{
-        font-size: 60px;
     }
 }

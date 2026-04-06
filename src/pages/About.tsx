@@ -5,6 +5,7 @@ import { faXTwitter, faInstagram, faGithub } from "@fortawesome/free-brands-svg-
 import styles from "./About.module.css";
 import { Link } from "react-router-dom";
 import AboutProfile from "../components/AboutProfile/aboutprofile";
+import AboutLinks from "../components/AboutLinks/aboutlinks";
 
 const About = ()=>{
     return(
@@ -20,23 +21,7 @@ const About = ()=>{
 
             <section className={styles.links}>
                 <h2 className={styles.sectionTitle}>Links</h2>
-                <div className={styles.linkItemsWrapper}>
-                    <div className={styles.linkItem}>
-                        <a href="https://x.com/haaaaa722" target="_blank">
-                            <FontAwesomeIcon icon={faXTwitter}/>
-                        </a>
-                    </div>
-                    <div className={styles.linkItem}>
-                        <a href="https://www.instagram.com/pics._.hyt?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
-                            <FontAwesomeIcon icon={faInstagram}/>
-                        </a>
-                    </div>
-                    <div className={styles.linkItem}>
-                        <a href="https://github.com/haaaaa722" target="_blank">
-                            <FontAwesomeIcon icon={faGithub}/>
-                        </a>
-                    </div>
-                </div>
+                <AboutLinks />
             </section>
 
             <section className={styles.contact}>

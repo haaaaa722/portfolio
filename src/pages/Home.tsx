@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import topImg from "../assets/images/IMG_0907.webp"
 import styles from "./Home.module.css";
 import AboutProfile from "../components/AboutProfile/aboutprofile";
+import AboutLinks from "../components/AboutLinks/aboutlinks";
 
 const Home = ()=>{
     return(
@@ -28,12 +29,8 @@ const Home = ()=>{
             <section className={styles.contact}>
                 <div className={`${styles.contactwrapper} ${styles.contentwrapper}`}>
                     <h2 className={styles.title}>Contact</h2>
-
-                    <div className={styles.btncontainer}>
-                        <Link to="/about" className={styles.viewmorebtn}>
-                            View more...
-                        </Link>
-                    </div>
+                    <AboutLinks />
+                    <Link to="/contact" className={styles.contactbtn}>お問い合わせはこちら</Link>
                 </div>
             </section>
 

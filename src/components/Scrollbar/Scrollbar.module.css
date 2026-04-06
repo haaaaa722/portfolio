@@ -25,6 +25,4 @@
 
     background: var(--text-color);
     border-radius: 4px;
-
-    transition: top 0.1s linear;
 }
