@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import topImg from "../assets/images/IMG_0907.webp"
 import styles from "./Home.module.css";
+import AboutProfile from "../components/AboutProfile/aboutprofile";
 
 const Home = ()=>{
     return(
@@ -13,6 +14,8 @@ const Home = ()=>{
             <section className={styles.about}>
                 <div className={`${styles.aboutwrapper} ${styles.contentwrapper}`}>
                     <h2 className={styles.title}>About</h2>
+
+                    <AboutProfile variant="home" />
 
                     <div className={styles.btncontainer}>
                         <Link to="/about" className={styles.viewmorebtn}>

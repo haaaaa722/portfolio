@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faXTwitter, faInstagram, faGithub } from "@fortawesome/free-brands-svg-icons";
 import styles from "./About.module.css";
 import { Link } from "react-router-dom";
+import AboutProfile from "../components/AboutProfile/aboutprofile";
 
 const About = ()=>{
     return(
@@ -14,15 +15,7 @@ const About = ()=>{
 
             <section className={styles.profile}>
                 <h2 className={styles.sectionTitle}>Profile</h2>
-                <div className={styles.profileContent}>
-                    <div className={styles.imgWrapper}>
-                        <img src={profileImg} alt="Profile" className={styles.profileImg} />
-                    </div>
-                    <div className={styles.profileTextWrapper}>
-                        <h3>はっ！</h3>
-                        <p>広島市立大学 情報科学部 情報工学科 3年</p>
-                    </div>
-                </div>
+                <AboutProfile />
             </section>
 
             <section className={styles.links}>
