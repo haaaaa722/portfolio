@@ -3,6 +3,10 @@
     display:flex;
     flex-direction: column;
     padding-right: 15px;
+
+    height: 100dvh;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
 }
 
 .title{
@@ -49,6 +53,12 @@
 
 .top, .about, .contact, .works, .photos{
     padding: 0.5rem;
+    flex-shrink: 0;
+}
+
+.top, .about, .works, .photos{
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
 }
 
 .top{

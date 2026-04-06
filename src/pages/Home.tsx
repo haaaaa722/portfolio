@@ -5,7 +5,7 @@ import styles from "./Home.module.css";
 
 const Home = ()=>{
     return(
-        <div className={styles.container}>
+        <div className={styles.container} id="main-scroll-container">
             <section className={styles.top}>
                 <img src={topImg} alt="トップ画像" className={styles.topImage} />
             </section>

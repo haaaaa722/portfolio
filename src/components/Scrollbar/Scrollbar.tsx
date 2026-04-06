@@ -10,11 +10,17 @@ const Scrollbar = ()=>{
     const location = useLocation();
 
     useEffect(()=>{
+        const scrollContainer = document.getElementById("main-scroll-container");
+        const targetNode = scrollContainer  || window;
+        const elementNode = scrollContainer || document.documentElement;
+
         const handleScrollAndResize = ()=>{
-            // ページ情報の取得
-            const totalHeight = document.documentElement.scrollHeight; //全体の高さ
-            const clientHeight = window.innerHeight; //今見えている画面の高さ
-            const currentPos = window.scrollY; //現在のスクロール位置
+            const isWindow = targetNode === window;
+
+            // 要素に応じて取得するプロパティを変える
+            const totalHeight = elementNode.scrollHeight; //全体の高さ
+            const clientHeight = isWindow ? window.innerHeight : elementNode.clientHeight; //今見えている画面の高さ
+            const currentPos = isWindow ? window.scrollY : elementNode.scrollTop; //現在のスクロール位置
 
             // スクロールが必要かチェック
             const hasScroll = totalHeight > clientHeight;
@@ -46,17 +52,16 @@ const Scrollbar = ()=>{
             setTrackHeight(`${calculatedHeight}px`);
         };
 
-        // スクロール時と画面サイズ変更時計算
-        window.addEventListener("scroll", handleScrollAndResize);
+        targetNode.addEventListener("scroll", handleScrollAndResize);
         window.addEventListener("resize", handleScrollAndResize);
 
-        // 初回実行
-        handleScrollAndResize();
+        // 初期計算
+        setTimeout(handleScrollAndResize, 50);
 
         return ()=>{
-            window.removeEventListener("scroll", handleScrollAndResize);
+            targetNode.removeEventListener("scroll", handleScrollAndResize);
             window.removeEventListener("resize", handleScrollAndResize);
-        };
+        }
     },[location.pathname]);
 
     if (!isVisible) return null;
