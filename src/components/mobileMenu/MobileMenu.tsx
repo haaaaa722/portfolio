@@ -4,12 +4,25 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faUser, faLayerGroup, faImages } from "@fortawesome/free-solid-svg-icons";
 import styles from "./MobileMenu.module.css";
 
-const MobileMenu = ()=>{
+type Props = {
+    navigateWithRipple:(
+        e: React.MouseEvent<HTMLAnchorElement>,
+        path: string
+        ) => void;
+}
+
+const MobileMenu: React.FC<Props> = ({ navigateWithRipple }) => {
     // メニューの開閉状態管理
     const [isOpen, setIsOpen] = useState(false);
 
     // 移動でメニューを閉じる的な
-    const closeMenu = ()=> setIsOpen(false);
+    const handleNavigation = (
+        e: React.MouseEvent<HTMLAnchorElement>,
+        path: string
+    )=>{
+        setIsOpen(false);
+        navigateWithRipple(e, path);
+    };
 
     return(
         <div className={styles.mobilemenu}>
@@ -22,22 +35,22 @@ const MobileMenu = ()=>{
             <nav className={`${styles.nav} ${isOpen ? styles.open : ""}`}>
                 <ul className={styles.navlist}>
                     <li>
-                        <Link to="/" onClick={closeMenu}>
+                        <Link to="/" onClick={(e) => handleNavigation(e, "/")}>
                             <FontAwesomeIcon icon={faHouse} />
                         </Link>
                     </li>
                     <li>
-                        <Link to="/about" onClick={closeMenu}>
+                        <Link to="/about" onClick={(e) => handleNavigation(e, "/about")}>
                             <FontAwesomeIcon icon={faUser} />
                         </Link>
                     </li>
                     <li>
-                        <Link to="/works" onClick={closeMenu}>
+                        <Link to="/works" onClick={(e) => handleNavigation(e, "/works")}>
                             <FontAwesomeIcon icon={faLayerGroup} />
                         </Link>
                     </li>
                     <li>
-                        <Link to="/photos" onClick={closeMenu}>
+                        <Link to="/photos" onClick={(e) => handleNavigation(e, "/photos")}>
                             <FontAwesomeIcon icon={faImages} />
                         </Link>
                     </li>
